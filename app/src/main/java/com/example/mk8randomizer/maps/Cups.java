@@ -3,22 +3,17 @@ package com.example.mk8randomizer.maps;
 import java.util.ArrayList;
 
 public class Cups {
-    ArrayList<Cup> cups = new ArrayList<>();
-    private boolean multiSelect = false;
-    public ArrayList<Cup> getCups() {
-        return cups;
-    }
 
-    public boolean isMultiSelect() {
-        return multiSelect;
-    }
+    ArrayList<CupType> cupTypes = new ArrayList<>();
 
-    public void setMultiSelect(boolean multiSelect) {
-        this.multiSelect = multiSelect;
+    public ArrayList<CupType> getCupTypes() {
+        return cupTypes;
     }
 
     public Cups() {
         //CREATION DES MAPS
+
+        //CLASSIQUE//
         //CHAMPIGNON
         Map map1 = new Map("Champidrome", "Switch");
         Map map2 = new Map("Parc Glougloop", "Switch");
@@ -39,6 +34,7 @@ public class Cups {
         Map map14 = new Map("Désert Toussec", "Switch");
         Map map15 = new Map("Château de Bowser", "Switch");
         Map map16 = new Map("Route Arc-en-ciel", "Switch");
+
         //RETRO//
         //CARAPACE
         Map map17 = new Map("Prairie Meuh Meuh", "WII");
@@ -60,6 +56,7 @@ public class Cups {
         Map map30 = new Map("Égout Piranha", "3DS");
         Map map31 = new Map("Volcan grondant", "WII");
         Map map32 = new Map("Route Arc-en-ciel", "N64");
+
         //DLC//
         //OEUF
         Map map33 = new Map("Circuit Yoshi", "GCN");
@@ -81,6 +78,7 @@ public class Cups {
         Map map46 = new Map("Route Ruban", "GBA");
         Map map47 = new Map("Métro Turbo", "Switch");
         Map map48 = new Map("Big Blue", "Switch");
+
         //PASS ADDITIONNEL//
         //TURBO DOREE
         Map map49 = new Map("Promenade à Paris", "TOUR");
@@ -170,32 +168,21 @@ public class Cups {
         Cup cup23 = new Cup("Coupe Gland", map89, map90, map91, map92, "Pass Additionnel");
         Cup cup24 = new Cup("Coupe à épines", map93, map94, map95, map96, "Pass Additionnel");
         //FIN CREATION CUPS
-        //AJOUT CUPS DANS LA LISTE
-        cups.add(cup1);
-        cups.add(cup2);
-        cups.add(cup3);
-        cups.add(cup4);
-        cups.add(cup5);
-        cups.add(cup6);
-        cups.add(cup7);
-        cups.add(cup8);
-        cups.add(cup9);
-        cups.add(cup10);
-        cups.add(cup11);
-        cups.add(cup12);
-        cups.add(cup13);
-        cups.add(cup14);
-        cups.add(cup15);
-        cups.add(cup16);
-        cups.add(cup17);
-        cups.add(cup18);
-        cups.add(cup19);
-        cups.add(cup20);
-        cups.add(cup21);
-        cups.add(cup22);
-        cups.add(cup23);
-        cups.add(cup24);
-        //FIN AJOUT CUPS DANS LA LISTE
+
+        //CREATION CUPS TYPE
+        CupType cupType1 = new CupType("Classique", cup1, cup2, cup3, cup4);
+        CupType cupType2 = new CupType("Retro", cup5, cup6, cup7, cup8);
+        CupType cupType3 = new CupType("DLC", cup9, cup10, cup11, cup12);
+        CupType cupType4 = new CupType("Pass Additionnel", cup13, cup14, cup15, cup16, cup17, cup18, cup19, cup20, cup21, cup22, cup23, cup24);
+        //FIN CREATION CUPS TYPE
+
+        //AJOUT CUP TYPES DANS LA LISTE
+        cupTypes.add(cupType1);
+        cupTypes.add(cupType2);
+        cupTypes.add(cupType3);
+        cupTypes.add(cupType4);
+        //FIN AJOUT CUP TYPES DANS LA LISTE
+
         //FIN CONSTRUCTEUR
 
 
