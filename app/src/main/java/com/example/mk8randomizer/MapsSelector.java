@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
 
-import com.example.mk8randomizer.maps.Cup;
 import com.example.mk8randomizer.maps.Cups;
 
 import java.util.HashMap;
@@ -46,54 +44,11 @@ public class MapsSelector extends AppCompatActivity {
             int finalI = i;
             imageViewHashMap.get(i).setOnClickListener(new View.OnClickListener() {
                                                            @Override
-                                                           public void onClick(View v) {
-                                                               if (cups.getCups().get(finalI).getSelected()) {
-                                                                   cups.getCups().get(finalI).setSelected(false);
-                                                                   Objects.requireNonNull(imageViewHashMap.get(finalI)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
-                                                                   for(int i = 0; i < cups.getCups().size(); i++) {
-                                                                       boolean selected = true;
-                                                                       if(cups.getCups().get(i).getType().equals(cups.getCups().get(finalI).getType())) {
-                                                                           if (!cups.getCups().get(i).getSelected()) {
-                                                                               selected = false;
-                                                                           }
-                                                                       }
-                                                                       if(selected) {
-                                                                           switch (cups.getCups().get(finalI).getType()) {
-                                                                               case "Classique":
-                                                                                   switchClassic.setChecked(false);
-                                                                                   break;
-                                                                               case "Retro":
-                                                                                   switchRetros.setChecked(false);
-                                                                                   break;
-                                                                               case "DLC":
-                                                                                   switchDLC.setChecked(false);
-                                                                                   break;
-                                                                               case "Pass Additionnel":
-                                                                                   switchPass.setChecked(false);
-                                                                           }
-                                                                       }
-                                                                   }
-                                                               }
-                                                               else {
-                                                                   cups.getCups().get(finalI).setSelected(true);
-                                                                   Objects.requireNonNull(imageViewHashMap.get(finalI)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
-                                                                   switch (cups.getCups().get(finalI).getType()) {
-                                                                       case "Classique":
-                                                                           switchClassic.setChecked(true);
-                                                                           break;
-                                                                       case "Retro":
-                                                                           switchRetros.setChecked(true);
-                                                                           break;
-                                                                       case "DLC":
-                                                                           switchDLC.setChecked(true);
-                                                                           break;
-                                                                       case "Pass Additionnel":
-                                                                           switchPass.setChecked(true);
-                                                                   }
-                                                               }
+                                                           public void onClick(View view) {
+                                                               MapsClick(finalI);
                                                            }
-                                                       }
-            );
+                                                       });
+
         }
         buttonNext.setOnClickListener(new View.OnClickListener() {
                                           @Override
@@ -228,5 +183,50 @@ public class MapsSelector extends AppCompatActivity {
         switchPass = findViewById(R.id.switchPass);
         switchMultiSelect = findViewById(R.id.switchMultiSelect);
         buttonNext = findViewById(R.id.buttonNext);
+    }
+    public void MapsClick(int finalI) {
+        if (cups.getCups().get(finalI).getSelected()) {
+            cups.getCups().get(finalI).setSelected(false);
+            Objects.requireNonNull(imageViewHashMap.get(finalI)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+            for (int i = 0; i < cups.getCups().size(); i++) {
+                boolean selected = true;
+                if (cups.getCups().get(i).getType().equals(cups.getCups().get(finalI).getType())) {
+                    if (!cups.getCups().get(i).getSelected()) {
+                        selected = false;
+                    }
+                }
+                if (selected) {
+                    switch (cups.getCups().get(finalI).getType()) {
+                        case "Classique":
+                            switchClassic.setChecked(false);
+                            break;
+                        case "Retro":
+                            switchRetros.setChecked(false);
+                            break;
+                        case "DLC":
+                            switchDLC.setChecked(false);
+                            break;
+                        case "Pass Additionnel":
+                            switchPass.setChecked(false);
+                    }
+                }
+            }
+        } else {
+            cups.getCups().get(finalI).setSelected(true);
+            Objects.requireNonNull(imageViewHashMap.get(finalI)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+            switch (cups.getCups().get(finalI).getType()) {
+                case "Classique":
+                    switchClassic.setChecked(true);
+                    break;
+                case "Retro":
+                    switchRetros.setChecked(true);
+                    break;
+                case "DLC":
+                    switchDLC.setChecked(true);
+                    break;
+                case "Pass Additionnel":
+                    switchPass.setChecked(true);
+            }
+        }
     }
 }
