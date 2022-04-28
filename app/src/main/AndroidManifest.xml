@@ -9,20 +9,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher8_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Mk8randomizer"
+        android:theme="@style/Theme.Mk8randomizer.Fullscreen"
         tools:ignore="ExtraText">
         <activity
             android:name=".RandomMaps"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MapsSelector"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:label="@string/title_activity_maps_selector"
-            android:theme="@style/Theme.Mk8randomizer.Fullscreen" />
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

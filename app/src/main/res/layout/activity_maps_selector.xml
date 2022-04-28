@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:fadingEdge="vertical"
     tools:context=".MapsSelector">
 
     <View
@@ -32,12 +33,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:height="20dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="Choississez vos coupes"
+                android:fontFamily="@font/mario_kart_f2"
+                android:shadowColor="#000000"
+                android:shadowRadius="20"
+                android:text="Choississez vos \ncoupes"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -78,10 +81,19 @@
             android:track="@drawable/track"
             tools:checked="false" />
 
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D7000000" />
+
         <ScrollView
             android:id="@+id/scroll"
+            style="@android:style/Widget.Material.ScrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fadingEdge="horizontal|vertical|none"
+            android:fadingEdgeLength="10dp"
             android:visibility="visible"
             tools:ignore="SpeakableTextPresentCheck"
             tools:visibility="visible">
@@ -122,12 +134,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"
+                        android:elevation="12dp"
+                        android:outlineAmbientShadowColor="#FF0000"
+                        android:outlineSpotShadowColor="#FF0000"
                         android:src="@drawable/mk8_mushroomcup"
                         android:visibility="visible"
-                        tools:visibility="visible"
-                        android:outlineSpotShadowColor="#FF0000"
-                        android:outlineAmbientShadowColor="#FF0000"
-                        android:elevation="12dp" />
+                        tools:visibility="visible" />
 
                     <ImageView
                         android:id="@+id/imageView2"
@@ -326,14 +338,14 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imageView14"
+                        android:id="@+id/imageView13"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:src="@drawable/mk8d_bcp_lucky_cat_emblem" />
 
                     <ImageView
-                        android:id="@+id/imageView15"
+                        android:id="@+id/imageView14"
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"
@@ -350,14 +362,14 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imageView16"
+                        android:id="@+id/imageView15"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:src="@drawable/mk8_propeller_cup_emblem" />
 
                     <ImageView
-                        android:id="@+id/imageView13"
+                        android:id="@+id/imageView16"
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"

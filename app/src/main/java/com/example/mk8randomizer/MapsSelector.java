@@ -16,6 +16,7 @@ import com.example.mk8randomizer.maps.Cup;
 import com.example.mk8randomizer.maps.Cups;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class MapsSelector extends AppCompatActivity {
 
@@ -32,52 +33,76 @@ public class MapsSelector extends AppCompatActivity {
         setContentView(R.layout.activity_maps_selector);
         View decorView = getWindow().getDecorView();
 // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
+        int uiOptions = getWindow().getDecorView().getSystemUiVisibility();
+        uiOptions = uiOptions | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        getWindow().getDecorView().setSystemUiVisibility(uiOptions);
 // Remember that you should never show the action bar if the
 // status bar is hidden, so hide that too if necessary.
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         initializeItems();
 
-        for (int i = 0; i < imageViewHashMap.size(); i++) {
+        for (int i = 0; i < 14; i++) {
             int finalI = i;
             imageViewHashMap.get(i).setOnClickListener(new View.OnClickListener() {
                                                            @Override
                                                            public void onClick(View v) {
-                                                               if (cups.getCups().get(finalI).getSelected() == true) {
+                                                               if (cups.getCups().get(finalI).getSelected()) {
                                                                    cups.getCups().get(finalI).setSelected(false);
-                                                                   System.out.println("Cup " + cups.getCups().get(finalI).getName() + " is now unselected");
-                                                                   imageViewHashMap.get(finalI).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
-                                                               } else {
+                                                                   Objects.requireNonNull(imageViewHashMap.get(finalI)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+                                                                   for(int i = 0; i < cups.getCups().size(); i++) {
+                                                                       boolean selected = true;
+                                                                       if(cups.getCups().get(i).getType().equals(cups.getCups().get(finalI).getType())) {
+                                                                           if (!cups.getCups().get(i).getSelected()) {
+                                                                               selected = false;
+                                                                           }
+                                                                       }
+                                                                       if(selected) {
+                                                                           switch (cups.getCups().get(finalI).getType()) {
+                                                                               case "Classique":
+                                                                                   switchClassic.setChecked(false);
+                                                                                   break;
+                                                                               case "Retro":
+                                                                                   switchRetros.setChecked(false);
+                                                                                   break;
+                                                                               case "DLC":
+                                                                                   switchDLC.setChecked(false);
+                                                                                   break;
+                                                                               case "Pass Additionnel":
+                                                                                   switchPass.setChecked(false);
+                                                                           }
+                                                                       }
+                                                                   }
+                                                               }
+                                                               else {
                                                                    cups.getCups().get(finalI).setSelected(true);
-                                                                   imageViewHashMap.get(finalI).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
-                                                               }
-                                                               if (finalI<4) {
-                                                                   switchClassic.setChecked(false);
-                                                               }
-                                                               if (finalI<8 && finalI>=4) {
-                                                                   switchRetros.setChecked(false);
-                                                               }
-                                                               if (finalI<12 && finalI>=8) {
-                                                                   switchDLC.setChecked(false);
-                                                               }
-                                                               if (finalI>=12) {
-                                                                   switchPass.setChecked(false);
+                                                                   Objects.requireNonNull(imageViewHashMap.get(finalI)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+                                                                   switch (cups.getCups().get(finalI).getType()) {
+                                                                       case "Classique":
+                                                                           switchClassic.setChecked(true);
+                                                                           break;
+                                                                       case "Retro":
+                                                                           switchRetros.setChecked(true);
+                                                                           break;
+                                                                       case "DLC":
+                                                                           switchDLC.setChecked(true);
+                                                                           break;
+                                                                       case "Pass Additionnel":
+                                                                           switchPass.setChecked(true);
+                                                                   }
                                                                }
                                                            }
-
                                                        }
             );
         }
         buttonNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                //intent.putExtra("cups", cups);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-            }
+                                          @Override
+                                          public void onClick(View v) {
+                                              Intent intent = new Intent(getApplicationContext(), RandomMaps.class);
+                                              //intent.putExtra("cups", cups);
+                                              startActivity(intent);
+                                              overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                                          }
                                       }
         );
 
@@ -86,8 +111,7 @@ public class MapsSelector extends AppCompatActivity {
             public void onClick(View v) {
                 if (switchMultiSelect.isChecked()) {
                     cups.setMultiSelect(true);
-                }
-                else {
+                } else {
                     cups.setMultiSelect(false);
                 }
             }
@@ -98,7 +122,7 @@ public class MapsSelector extends AppCompatActivity {
                 if (switchClassic.isChecked()) {
                     for (int i = 0; i < 4; i++) {
                         cups.getCups().get(i).setSelected(true);
-                        imageViewHashMap.get(i).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+                        Objects.requireNonNull(imageViewHashMap.get(i)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
                     }
                 }
             }
@@ -109,7 +133,7 @@ public class MapsSelector extends AppCompatActivity {
                 if (switchRetros.isChecked()) {
                     for (int i = 4; i < 8; i++) {
                         cups.getCups().get(i).setSelected(true);
-                        imageViewHashMap.get(i).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+                        Objects.requireNonNull(imageViewHashMap.get(i)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
                     }
                 }
             }
@@ -120,7 +144,7 @@ public class MapsSelector extends AppCompatActivity {
                 if (switchDLC.isChecked()) {
                     for (int i = 8; i < 12; i++) {
                         cups.getCups().get(i).setSelected(true);
-                        imageViewHashMap.get(i).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+                        Objects.requireNonNull(imageViewHashMap.get(i)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
                     }
                 }
             }
@@ -131,12 +155,16 @@ public class MapsSelector extends AppCompatActivity {
                 if (switchPass.isChecked()) {
                     for (int i = 12; i < 14; i++) {
                         cups.getCups().get(i).setSelected(true);
-                        imageViewHashMap.get(i).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+                        Objects.requireNonNull(imageViewHashMap.get(i)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
                     }
                 }
             }
         });
+        for (int i = 14; i < 24; i++) {
+            Objects.requireNonNull(imageViewHashMap.get(i)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+        }
     }
+
 
     @Override
     public void finish() {
