@@ -8,7 +8,7 @@
     android:backgroundTint="#002245">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/backViewMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foreground="@drawable/mk8_background"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/backViewMain"
         tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton

@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         mapsButton = findViewById(R.id.mapsButton);
+        //si appuie sur le bouton "Maps", on ouvre l'activité MapsSelector
         mapsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * @function openMapsSelector
+     * Opens the MapsSelectorActivity when the right button is clicked
+     */
     public void openMapsSelector() {
         Intent intent = new Intent(this, MapsSelector.class);
         startActivity(intent);

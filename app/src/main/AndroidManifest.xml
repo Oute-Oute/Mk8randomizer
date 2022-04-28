@@ -12,28 +12,36 @@
         android:theme="@style/Theme.Mk8randomizer.Fullscreen"
         tools:ignore="ExtraText">
         <activity
-            android:name=".RandomMaps"
-            android:exported="false"
-            android:theme="@style/Theme.Mk8randomizer.Fullscreen"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".MapsSelector"
+            android:name=".StartupActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:label="@string/title_activity_maps_selector"
-            android:theme="@style/Theme.Mk8randomizer.Fullscreen"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Mk8randomizer.Fullscreen"
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_startup"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RandomMaps"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen" />
+        <activity
+            android:name=".MapsSelector"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_maps_selector"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen"/>
+
     </application>
 
 </manifest>

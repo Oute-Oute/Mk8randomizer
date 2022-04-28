@@ -24,6 +24,12 @@ public class MapsSelector extends AppCompatActivity {
     private Switch switchMultiSelect, switchClassic, switchRetros, switchDLC, switchPass;
     private Button buttonNext;
 
+    /**
+     * @param savedInstanceState
+     * @function onCreate()
+     * This method is called when the activity is created.
+     * It creates all the listeners for the buttons and switches.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -51,28 +57,37 @@ public class MapsSelector extends AppCompatActivity {
                     }
                 });
 
-            }}
+            }
+        }
         buttonNext.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
+                                              //création de la novelle page
                                               Intent intent = new Intent(getApplicationContext(), RandomMaps.class);
                                               //intent.putExtra("cups", cups);
+                                              //demarrage de la nouvelle page
                                               startActivity(intent);
+                                              //animation de la transition
                                               overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                                           }
                                       }
         );
-
+        //bouton de multi sélection d'une meme map dans le randomizer
         switchMultiSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //si le switch est a true, on passe l'attribut cup.mutliselect a true
                 if (switchMultiSelect.isChecked()) {
                     cups.setMultiSelect(true);
-                } else {
+                }
+                //sinon false
+                else {
                     cups.setMultiSelect(false);
                 }
             }
         });
+        //switch pour selectionner tout un type de map
+        //les 4 switchs fonctionnent de la meme maniere
         switchClassic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,13 +117,22 @@ public class MapsSelector extends AppCompatActivity {
         }
     }
 
+    /**
+     * @function finish()
+     * This method is called when the user clicks the back button.
+     */
 
     @Override
     public void finish() {
         super.finish();
+        //animation
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
+    /**
+     * @function initializeItems()
+     * Initializes the items in the activity (imageViews, textViews, etc.)
+     */
     public void initializeItems() {
         imageView1 = findViewById(R.id.imageView1);
         imageView2 = findViewById(R.id.imageView2);

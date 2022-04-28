@@ -25,17 +25,21 @@ public class RandomMaps extends AppCompatActivity {
 // status bar is hidden, so hide that too if necessary.
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-
+        //test d'affichage des maps dans le layout
         firstMap = findViewById(R.id.firstMap);
         firstMap.setColorFilter(0x99999999,PorterDuff.Mode.MULTIPLY);
         secondMap = findViewById(R.id.secondMap);
         thirdMap = findViewById(R.id.thirdMap);
         thirdMap.setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
     }
-
+    /**
+     * @function finish()
+     * This method is called when the user clicks the back button.
+     */
     @Override
     public void finish() {
         super.finish();
+        //animation
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

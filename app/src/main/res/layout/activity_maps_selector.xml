@@ -8,7 +8,7 @@
     tools:context=".MapsSelector">
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/backViewMapSelect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foreground="@drawable/mk8_background"
@@ -22,6 +22,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -48,21 +50,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:visibility="visible" />
 
-            <Button
-                android:id="@+id/buttonNext"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="48dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:rotationY="180"
-                android:visibility="visible"
-                app:icon="?attr/actionModeCloseDrawable"
-                app:iconPadding="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SpeakableTextPresentCheck"
-                tools:visibility="visible" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Switch
@@ -72,11 +59,15 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:checked="false"
+            android:fontFamily="@font/baijamjuree_regular"
+            android:shadowColor="#000000"
+            android:shadowRadius="20"
             android:text="Autoriser plusieurs \nselections d'un circuit"
             android:textAlignment="textStart"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF"
             android:textSize="20sp"
+            android:textStyle="bold"
             android:thumb="@drawable/thumb"
             android:track="@drawable/track"
             tools:checked="false" />
@@ -91,7 +82,7 @@
             android:id="@+id/scroll"
             style="@android:style/Widget.Material.ScrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="661dp"
             android:fadingEdge="horizontal|vertical|none"
             android:fadingEdgeLength="10dp"
             android:visibility="visible"
@@ -112,11 +103,15 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:checked="true"
+                    android:fontFamily="@font/baijamjuree_regular"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="20"
                     android:text="Coupes Classiques"
                     android:textAlignment="textStart"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
                     android:textSize="20sp"
+                    android:textStyle="bold"
                     android:thumb="@drawable/thumb"
                     android:track="@drawable/track" />
 
@@ -185,11 +180,15 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:checked="true"
+                    android:fontFamily="@font/baijamjuree_regular"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="20"
                     android:text="Coupes Retros"
                     android:textAlignment="viewStart"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
                     android:textSize="20sp"
+                    android:textStyle="bold"
                     android:thumb="@drawable/thumb"
                     android:track="@drawable/track" />
 
@@ -252,11 +251,15 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:checked="true"
+                    android:fontFamily="@font/baijamjuree_regular"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="20"
                     android:text="Coupes des DLC"
                     android:textAlignment="viewStart"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
                     android:textSize="20sp"
+                    android:textStyle="bold"
                     android:thumb="@drawable/thumb"
                     android:track="@drawable/track"
                     tools:checked="true" />
@@ -320,11 +323,15 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:checked="true"
+                    android:fontFamily="@font/baijamjuree_regular"
+                    android:shadowColor="#000000"
+                    android:shadowRadius="20"
                     android:text="Coupes du Pass Additionnel"
                     android:textAlignment="viewStart"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
                     android:textSize="20sp"
+                    android:textStyle="bold"
                     android:thumb="@drawable/thumb"
                     android:track="@drawable/track" />
 
@@ -479,6 +486,38 @@
 
             </LinearLayout>
         </ScrollView>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D7000000" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonNext"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_bouton"
+                android:fontFamily="@font/mario_kart_f2"
+                android:shadowColor="#000000"
+                android:shadowRadius="20"
+                android:text="Randomizer"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

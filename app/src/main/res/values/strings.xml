@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Mario Kart 8 Randomizer</string>
     <string name="title_activity_maps_selector">MapsSelector</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_startup">Mk8 Randomizer</string>
 </resources>
