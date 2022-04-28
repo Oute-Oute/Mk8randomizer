@@ -5,11 +5,13 @@ import java.util.ArrayList;
 public class CupType {
     String name;
     ArrayList<Cup> cups = new ArrayList<>();
-    private boolean multiSelect = false;
 
 
     public ArrayList<Cup> getCups() {
         return cups;
+    }
+    public Cup getCups(int type) {
+        return cups.get(type);
     }
 
     public CupType(String name, Cup cup1, Cup cup2, Cup cup3, Cup cup4) {
@@ -34,13 +36,6 @@ public class CupType {
         cups.add(cup10);
         cups.add(cup11);
         cups.add(cup12);
-    }
-
-    public boolean isMultiSelect() {
-        return multiSelect;
-    }
-    public void setMultiSelect(boolean multiSelect) {
-        this.multiSelect = multiSelect;
     }
 
 }

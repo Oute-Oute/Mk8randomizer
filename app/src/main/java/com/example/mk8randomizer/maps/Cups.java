@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Cups {
 
     ArrayList<CupType> cupTypes = new ArrayList<>();
+    private boolean multiSelect = false;
+
 
     public ArrayList<CupType> getCupTypes() {
         return cupTypes;
@@ -187,4 +189,12 @@ public class Cups {
 
 
     }
+
+    public boolean isMultiSelect() {
+        return multiSelect;
+    }
+    public void setMultiSelect(boolean multiSelect) {
+        this.multiSelect = multiSelect;
+    }
+
 }
