@@ -42,16 +42,16 @@ public class MapsSelector extends AppCompatActivity {
 
         for (int type = 0; type < 4; type++) {
             for(int i = 0; i < cups.getCupTypes().get(type).getCups().size(); i++){
-            int finalI = i;
-            int finalType = type;
-            imageViewHashMap.get(i).setOnClickListener(new View.OnClickListener() {
-                                                           @Override
-                                                           public void onClick(View view) {
-                                                               MapsClick(finalType, finalI);
-                                                           }
-                                                       });
+                int finalI = i;
+                int finalType = type;
+                imageViewHashMap.get(i).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        MapsClick(finalType, finalI);
+                    }
+                });
 
-        }}
+            }}
         buttonNext.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
@@ -212,17 +212,31 @@ public class MapsSelector extends AppCompatActivity {
         }
     }
     public void switchClick(Switch switchButton ,int type){
-            if (switchButton.isChecked()) {
-                for (int i = 0; i < 4; i++) {
-                    cups.getCupTypes().get(type).getCups().get(i).setSelected(true);
-                    Objects.requireNonNull(imageViewHashMap.get(i)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+        if (switchButton.isChecked() && type <3) {
+            for (int i = 0; i < 4; i++) {
+                cups.getCupTypes().get(type).getCups().get(i).setSelected(true);
+                    Objects.requireNonNull(imageViewHashMap.get(i+4*type)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
                 }
-            }
-        if (!switchButton.isChecked()) {
+        }
+        if (!switchButton.isChecked() && type <3) {
             for (int i = 0; i < 4; i++) {
                 cups.getCupTypes().get(type).getCups().get(i).setSelected(false);
-                Objects.requireNonNull(imageViewHashMap.get(i)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+                    Objects.requireNonNull(imageViewHashMap.get(i+4*type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+                }
+        }
+
+        if (switchButton.isChecked() && type ==3) {
+            // ATTENTION ! penser à modifier la valeur max de i selon le nombre de coupes du pass release
+            for (int i = 0; i < 2; i++) {
+                cups.getCupTypes().get(type).getCups().get(i).setSelected(true);
+                Objects.requireNonNull(imageViewHashMap.get(i+4*type)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
             }
         }
+        if (!switchButton.isChecked() && type ==3) {
+            for (int i = 0; i < 2; i++) {
+                cups.getCupTypes().get(type).getCups().get(i).setSelected(false);
+                Objects.requireNonNull(imageViewHashMap.get(i+4*type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+            }
         }
     }
+}
