@@ -3,6 +3,7 @@ package com.example.mk8randomizer.maps;
 public class Map {
     String name;
     String console;
+    boolean available;
 
     public Map(String name, String console) {
         this.name = name;

@@ -50,12 +50,13 @@ public class MapsSelector extends AppCompatActivity {
             for (int i = 0; i < cups.getCupTypes().get(type).getCups().size(); i++) {
                 int finalI = i;
                 int finalType = type;
+                if (cups.getCupTypes().get(type).getCups().get(i).isAvailable()) {
                 imageViewHashMap.get(i + 4 * type).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         MapsClick(finalType, finalI);
                     }
-                });
+                });}
             }
         }
         buttonNext.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +72,7 @@ public class MapsSelector extends AppCompatActivity {
                                           }
                                       }
         );
+
         //bouton de multi sélection d'une meme map dans le randomizer
         switchMultiSelect.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +87,7 @@ public class MapsSelector extends AppCompatActivity {
                 }
             }
         });
+
         //switch pour selectionner tout un type de map
         //les 4 switchs fonctionnent de la meme maniere
         switchClassic.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +123,6 @@ public class MapsSelector extends AppCompatActivity {
      * @function finish()
      * This method is called when the user clicks the back button.
      */
-
     @Override
     public void finish() {
         super.finish();

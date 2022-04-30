@@ -9,14 +9,16 @@ public class Cup {
     String type;
     Boolean selected= true;
     private String name;
+    boolean available;
 
-    Cup(String name, Map map1, Map map2, Map map3, Map map4, String type){
+    Cup(String name, Map map1, Map map2, Map map3, Map map4, String type, Boolean available){
         this.name = name;
         maps.add(map1);
         maps.add(map2);
         maps.add(map3);
         maps.add(map4);
         this.type = type;
+        this.available = available;
     }
 
     public Map getRandomMap() {
@@ -77,5 +79,9 @@ public class Cup {
 
     public void setSelected(Boolean select) {
         this.selected = select;
+    }
+
+    public boolean isAvailable() {
+        return available;
     }
 }
