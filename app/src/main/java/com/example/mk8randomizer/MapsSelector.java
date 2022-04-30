@@ -51,12 +51,12 @@ public class MapsSelector extends AppCompatActivity {
                 int finalI = i;
                 int finalType = type;
                 if (cups.getCupTypes().get(type).getCups().get(i).isAvailable()) {
-                imageViewHashMap.get(i + 4 * type).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        MapsClick(finalType, finalI);
-                    }
-                });}
+                    imageViewHashMap.get(i + 4 * type).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            MapsClick(finalType, finalI);
+                        }
+                    });}
             }
         }
         buttonNext.setOnClickListener(new View.OnClickListener() {
@@ -114,8 +114,10 @@ public class MapsSelector extends AppCompatActivity {
                 switchClick(switchPass, 3);
             }
         });
-        for (int i = 14; i < 24; i++) {
-            Objects.requireNonNull(imageViewHashMap.get(i)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+        for (int i = 0; i < 12; i++) {
+            if(!cups.getCupTypes().get(3).getCups().get(i).isAvailable()) {
+                Objects.requireNonNull(imageViewHashMap.get(i+12)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+            }
         }
     }
 
