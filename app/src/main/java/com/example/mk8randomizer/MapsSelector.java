@@ -47,15 +47,15 @@ public class MapsSelector extends AppCompatActivity {
         initializeItems();
 
         for (int type = 0; type < 4; type++) {
-            for(int i = 0; i < cups.getCupTypes().get(type).getCups().size(); i++){
+            for (int i = 0; i < cups.getCupTypes().get(type).getCups().size(); i++) {
                 int finalI = i;
                 int finalType = type;
-                    imageViewHashMap.get(i+4*type).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            MapsClick(finalType, finalI);
-                        }
-                    });
+                imageViewHashMap.get(i + 4 * type).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        MapsClick(finalType, finalI);
+                    }
+                });
             }
         }
         buttonNext.setOnClickListener(new View.OnClickListener() {
@@ -90,25 +90,25 @@ public class MapsSelector extends AppCompatActivity {
         switchClassic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchClick(switchClassic,0);
+                switchClick(switchClassic, 0);
             }
         });
         switchRetros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchClick(switchRetros,1);
+                switchClick(switchRetros, 1);
             }
         });
         switchDLC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchClick(switchDLC,2);
+                switchClick(switchDLC, 2);
             }
         });
         switchPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchClick(switchPass,3);
+                switchClick(switchPass, 3);
             }
         });
         for (int i = 14; i < 24; i++) {
@@ -189,77 +189,89 @@ public class MapsSelector extends AppCompatActivity {
         switchMultiSelect = findViewById(R.id.switchMultiSelect);
         buttonNext = findViewById(R.id.buttonNext);
     }
+
     public void MapsClick(int type, int finalI) {
         if (cups.getCupTypes().get(type).getCups().get(finalI).getSelected()) {
             cups.getCupTypes().get(type).getCups().get(finalI).setSelected(false);
-            Objects.requireNonNull(imageViewHashMap.get(finalI+4*type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+            boolean selected = true;
+            Objects.requireNonNull(imageViewHashMap.get(finalI + 4 * type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
             for (int i = 0; i < cups.getCupTypes().get(type).getCups().size(); i++) {
-                boolean selected = true;
+
                 if (cups.getCupTypes().get(type).getCups().get(i).getType().equals(cups.getCupTypes().get(type).getCups().get(finalI).getType())) {
                     if (!cups.getCupTypes().get(type).getCups().get(i).getSelected()) {
                         selected = false;
                     }
-                }
-                if (selected) {
-                    switch (cups.getCupTypes().get(type).getCups().get(finalI).getType()) {
-                        case "Classique":
-                            switchClassic.setChecked(false);
-                            break;
-                        case "Retro":
-                            switchRetros.setChecked(false);
-                            break;
-                        case "DLC":
-                            switchDLC.setChecked(false);
-                            break;
-                        case "Pass Additionnel":
-                            switchPass.setChecked(false);
-                    }
+                } }
+            if (!selected) {
+                switch (cups.getCupTypes().get(type).getCups().get(finalI).getType()) {
+                    case "Classique":
+                        switchClassic.setChecked(false);
+                        break;
+                    case "Retro":
+                        switchRetros.setChecked(false);
+                        break;
+                    case "DLC":
+                        switchDLC.setChecked(false);
+                        break;
+                    case "Pass Additionnel":
+                        switchPass.setChecked(false);
                 }
             }
-        }
-        else {
+
+        } else {
             cups.getCupTypes().get(type).getCups().get(finalI).setSelected(true);
-            Objects.requireNonNull(imageViewHashMap.get(finalI+4*type)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
-            switch (cups.getCupTypes().get(type).getCups().get(finalI).getType()) {
-                case "Classique":
-                    switchClassic.setChecked(true);
-                    break;
-                case "Retro":
-                    switchRetros.setChecked(true);
-                    break;
-                case "DLC":
-                    switchDLC.setChecked(true);
-                    break;
-                case "Pass Additionnel":
-                    switchPass.setChecked(true);
+            boolean selected = false;
+            Objects.requireNonNull(imageViewHashMap.get(finalI + 4 * type)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+
+            for (int i = 0; i < cups.getCupTypes().get(type).getCups().size(); i++) {
+                if (!cups.getCupTypes().get(type).getCups().get(i).getSelected()) {
+                    selected = true; }
             }
+
+            if (!selected) {
+                switch (cups.getCupTypes().get(type).getCups().get(finalI).getType()) {
+                    case "Classique":
+                        switchClassic.setChecked(true);
+                        break;
+                    case "Retro":
+                        switchRetros.setChecked(true);
+                        break;
+                    case "DLC":
+                        switchDLC.setChecked(true);
+                        break;
+                    case "Pass Additionnel":
+                        switchPass.setChecked(true);
+                }
+            }
+
         }
     }
-    public void switchClick(Switch switchButton ,int type){
-        if (switchButton.isChecked() && type <3) {
+
+    public void switchClick(Switch switchButton, int type) {
+        if (switchButton.isChecked() && type < 3) {
             for (int i = 0; i < 4; i++) {
                 cups.getCupTypes().get(type).getCups().get(i).setSelected(true);
-                Objects.requireNonNull(imageViewHashMap.get(i+4*type)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+                Objects.requireNonNull(imageViewHashMap.get(i + 4 * type)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
             }
         }
-        if (!switchButton.isChecked() && type <3) {
+        if (!switchButton.isChecked() && type < 3) {
             for (int i = 0; i < 4; i++) {
                 cups.getCupTypes().get(type).getCups().get(i).setSelected(false);
-                Objects.requireNonNull(imageViewHashMap.get(i+4*type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+                Objects.requireNonNull(imageViewHashMap.get(i + 4 * type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
             }
         }
 
-        if (switchButton.isChecked() && type ==3) {
+        if (switchButton.isChecked() && type == 3) {
             // ATTENTION ! penser à modifier la valeur max de i selon le nombre de coupes du pass release
             for (int i = 0; i < 2; i++) {
                 cups.getCupTypes().get(type).getCups().get(i).setSelected(true);
-                Objects.requireNonNull(imageViewHashMap.get(i+4*type)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
+                Objects.requireNonNull(imageViewHashMap.get(i + 4 * type)).setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);
             }
         }
-        if (!switchButton.isChecked() && type ==3) {
+        if (!switchButton.isChecked() && type == 3) {
             for (int i = 0; i < 2; i++) {
                 cups.getCupTypes().get(type).getCups().get(i).setSelected(false);
-                Objects.requireNonNull(imageViewHashMap.get(i+4*type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+                Objects.requireNonNull(imageViewHashMap.get(i + 4 * type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
             }
         }
     }

@@ -10,7 +10,7 @@ public class CupType {
     public ArrayList<Cup> getCups() {
         return cups;
     }
-    public Cup getCups(int type) {
+    public Cup getCup(int type) {
         return cups.get(type);
     }
 
