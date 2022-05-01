@@ -64,8 +64,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundSelector"
         app:layout_constraintEnd_toEndOf="@+id/backViewRandomSelect"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backgroundSelector"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/map_select_contour" />
 
     <androidx.appcompat.widget.AppCompatButton

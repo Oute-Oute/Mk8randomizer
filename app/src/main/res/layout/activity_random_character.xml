@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".RandomMaps">
+
+    <View
+        android:id="@+id/backViewRandomSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/mk8_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/backgroundSelector"
+        android:layout_width="326dp"
+        android:layout_height="592dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backViewRandomSelect"
+        app:srcCompat="@drawable/map_select" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mapsButton2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_bouton"
+        android:fontFamily="@font/mario_kart_f2"
+        android:shadowColor="#000000"
+        android:shadowRadius="20"
+        android:text="Selectionner"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundSelector"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/fond_texte_map"
+        android:fontFamily="@font/baijamjuree_regular"
+        android:padding="10dp"
+        android:text="Mario de métal"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundSelector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundSelector"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundSelector"
+        app:layout_constraintStart_toStartOf="@+id/backgroundSelector"
+        app:layout_constraintTop_toTopOf="@+id/backgroundSelector"
+        app:srcCompat="@drawable/mk8dx_metal_mario_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

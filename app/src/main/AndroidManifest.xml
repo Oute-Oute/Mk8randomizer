@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.mk8randomizer">
+    package="com.example.mk8randomizer" >
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher8_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mk8randomizer.Fullscreen"
-        tools:ignore="ExtraText">
+        tools:ignore="ExtraText" >
+        <activity
+            android:name=".RandomCharacter"
+            android:exported="false" />
         <activity
             android:name=".RandomVehicle"
             android:exported="false" />
@@ -23,7 +26,7 @@
             android:exported="true"
             android:label="@string/title_activity_startup"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Mk8randomizer.Fullscreen.Fullscreen">
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

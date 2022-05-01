@@ -12,8 +12,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mapsButton;
-    private Button vehiclesButton;
+    private Button mapsButton, vehiclesButton, characterButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
         vehiclesButton = findViewById(R.id.vehiclesButton);
         //si appuie sur le bouton "Vehicles", on ouvre l'activité VehiclesSelector
         vehiclesButton.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +43,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 openVehicleSelector();
             }     });
-        }
+
+        characterButton = findViewById(R.id.characterButton);
+        //si appuie sur le bouton "Personnages", on ouvre l'activité RandomCharacter
+        characterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRandomCharacter();
+            }     });
+    }
 
     /**
      * @function openMapsSelector
@@ -61,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
      */
     public void openVehicleSelector() {
         Intent intent = new Intent(this, VehicleSelector.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void openRandomCharacter() {
+        Intent intent = new Intent(this, RandomCharacter.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

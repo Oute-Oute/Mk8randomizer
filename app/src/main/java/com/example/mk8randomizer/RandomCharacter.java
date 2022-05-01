@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
-public class RandomVehicle extends AppCompatActivity {
+public class RandomCharacter extends AppCompatActivity {
+
+    private ImageView middleCharacter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_random_vehicle);
+        setContentView(R.layout.activity_random_character);
         View decorView = getWindow().getDecorView();
 // Hide the status bar.
         int uiOptions = getWindow().getDecorView().getSystemUiVisibility();
