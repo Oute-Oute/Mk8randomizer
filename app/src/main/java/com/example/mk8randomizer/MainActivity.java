@@ -13,6 +13,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button mapsButton;
+    private Button vehiclesButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-    }
+        vehiclesButton = findViewById(R.id.vehiclesButton);
+        //si appuie sur le bouton "Vehicles", on ouvre l'activité VehiclesSelector
+        vehiclesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openVehicleSelector();
+            }     });
+        }
 
     /**
      * @function openMapsSelector
@@ -43,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
      */
     public void openMapsSelector() {
         Intent intent = new Intent(this, MapsSelector.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    /**
+     * @function openVehiclesSelector
+     * Opens the VehiclesSelectorActivity when the right button is clicked
+     */
+    public void openVehicleSelector() {
+        Intent intent = new Intent(this, VehicleSelector.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Mk8randomizer.Fullscreen"
         tools:ignore="ExtraText">
         <activity
+            android:name=".RandomVehicle"
+            android:exported="false" />
+        <activity
             android:name=".VehicleSelector"
             android:exported="false" />
         <activity
