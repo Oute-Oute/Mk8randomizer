@@ -6,4 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".RandomVehicle">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/mk8_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/vehicleRandomizeFrame"
+        android:layout_width="410dp"
+        android:layout_height="317dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kart_select" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/vehicleRandomizeButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_bouton"
+        android:fontFamily="@font/mario_kart_f2"
+        android:shadowColor="#000000"
+        android:shadowRadius="20"
+        android:text="Selectionner"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicleRandomizeFrame"
+        tools:visibility="visible" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
