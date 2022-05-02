@@ -1,8 +1,9 @@
 package com.example.mk8randomizer.maps;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Cup {
+public class Cup implements Serializable {
     String image;
     ArrayList<Map> maps = new ArrayList<>();
     float probability;

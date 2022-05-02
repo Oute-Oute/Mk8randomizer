@@ -1,8 +1,9 @@
 package com.example.mk8randomizer.maps;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Cups {
+public class Cups implements Serializable{
 
     ArrayList<CupType> cupTypes = new ArrayList<>();
     private boolean multiSelect = false;
@@ -17,131 +18,131 @@ public class Cups {
 
         //CLASSIQUE//
         //CHAMPIGNON
-        Map map1 = new Map("Champidrome", "Switch");
-        Map map2 = new Map("Parc Glougloop", "Switch");
-        Map map3 = new Map("Piste aux délices", "Switch");
-        Map map4 = new Map("Temple Thwomp", "Switch");
+        Map map1 = new Map("Champidrome", "Switch", false);
+        Map map2 = new Map("Parc Glougloop", "Switch", false);
+        Map map3 = new Map("Piste aux délices", "Switch", false);
+        Map map4 = new Map("Temple Thwomp", "Switch", false);
         //FLEUR
-        Map map5 = new Map("Circuit Mario", "Switch");
-        Map map6 = new Map("Promenade Toad", "Switch");
-        Map map7 = new Map("Manoir trempé", "Switch");
-        Map map8 = new Map("Cascades Maskass", "Switch");
+        Map map5 = new Map("Circuit Mario", "Switch", false);
+        Map map6 = new Map("Promenade Toad", "Switch", false);
+        Map map7 = new Map("Manoir trempé", "Switch", false);
+        Map map8 = new Map("Cascades Maskass", "Switch", false);
         //ETOILE
-        Map map9 = new Map("Aéroport Azur", "Switch");
-        Map map10 = new Map("Lagon Tourbillon", "Switch");
-        Map map11 = new Map("Club Mario", "Switch");
-        Map map12 = new Map("Descente givrée", "Switch");
+        Map map9 = new Map("Aéroport Azur", "Switch", false);
+        Map map10 = new Map("Lagon Tourbillon", "Switch", false);
+        Map map11 = new Map("Club Mario", "Switch", false);
+        Map map12 = new Map("Descente givrée", "Switch", false);
         //SPECIALE
-        Map map13 = new Map("Voie céleste", "Switch");
-        Map map14 = new Map("Désert Toussec", "Switch");
-        Map map15 = new Map("Château de Bowser", "Switch");
-        Map map16 = new Map("Route Arc-en-ciel", "Switch");
+        Map map13 = new Map("Voie céleste", "Switch", false);
+        Map map14 = new Map("Désert Toussec", "Switch", false);
+        Map map15 = new Map("Château de Bowser", "Switch", false);
+        Map map16 = new Map("Route Arc-en-ciel", "Switch", false);
 
         //RETRO//
         //CARAPACE
-        Map map17 = new Map("Prairie Meuh Meuh", "WII");
-        Map map18 = new Map("Circuit Mario", "GBA");
-        Map map19 = new Map("Plage Cheep Cheep", "DS");
-        Map map20 = new Map("Autoroute Toad", "N64");
+        Map map17 = new Map("Prairie Meuh Meuh", "WII", false);
+        Map map18 = new Map("Circuit Mario GBA", "GBA", false);
+        Map map19 = new Map("Plage Cheep Cheep", "DS", false);
+        Map map20 = new Map("Autoroute Toad", "N64", false);
         //BANANE
-        Map map21 = new Map("Désert Sec Sec", "GCN");
-        Map map22 = new Map("Plaine Donut 3", "SNES");
-        Map map23 = new Map("Autodrome royal", "N64");
-        Map map24 = new Map("Forêt tropicale DK", "3DS");
+        Map map21 = new Map("Désert Sec Sec", "GCN", false);
+        Map map22 = new Map("Plaine Donut 3", "SNES", false);
+        Map map23 = new Map("Autodrome royal", "N64", false);
+        Map map24 = new Map("Forêt tropicale DK", "3DS", false);
         //FEUILLE
-        Map map25 = new Map("Stade Wario", "DS");
-        Map map26 = new Map("Royaume Sorbet", "GCN");
-        Map map27 = new Map("Piste musicale", "3DS");
-        Map map28 = new Map("Vallée Yoshi", "N64");
+        Map map25 = new Map("Stade Wario", "DS", false);
+        Map map26 = new Map("Royaume Sorbet", "GCN", false);
+        Map map27 = new Map("Piste musicale", "3DS", false);
+        Map map28 = new Map("Vallée Yoshi", "N64", false);
         //ECLAIR
-        Map map29 = new Map("Horloge Tic-Tac", "DS");
-        Map map30 = new Map("Égout Piranha", "3DS");
-        Map map31 = new Map("Volcan grondant", "WII");
-        Map map32 = new Map("Route Arc-en-ciel", "N64");
+        Map map29 = new Map("Horloge Tic-Tac", "DS", false);
+        Map map30 = new Map("Égout Piranha", "3DS", false);
+        Map map31 = new Map("Volcan grondant", "WII", false);
+        Map map32 = new Map("Route Arc-en-ciel N64", "N64", false);
 
         //DLC//
         //OEUF
-        Map map33 = new Map("Circuit Yoshi", "GCN");
-        Map map34 = new Map("Arène d'Excitebike", "Switch");
-        Map map35 = new Map("Route du dragon", "Switch");
-        Map map36 = new Map("Mute City", "Switch");
+        Map map33 = new Map("Circuit Yoshi", "GCN", false);
+        Map map34 = new Map("Arène d'Excitebike", "Switch", false);
+        Map map35 = new Map("Route du dragon", "Switch", false);
+        Map map36 = new Map("Mute City", "Switch", false);
         //TRIFORCE
-        Map map37 = new Map("Mine Wario", "WII");
-        Map map38 = new Map("Route Arc-en-ciel", "SNES");
-        Map map39 = new Map("Station Glagla", "Switch");
-        Map map40 = new Map("Circuit d'Hyrule", "Switch");
+        Map map37 = new Map("Mine Wario", "WII", false);
+        Map map38 = new Map("Route Arc-en-ciel SNES", "SNES", false);
+        Map map39 = new Map("Station Glagla", "Switch", false);
+        Map map40 = new Map("Circuit d'Hyrule", "Switch", false);
         //CROSSING
-        Map map41 = new Map("Parc Baby", "GCN");
-        Map map42 = new Map("Pays Fromage", "GBA");
-        Map map43 = new Map("Passage Feuillage", "Switch");
-        Map map44 = new Map("Animal Crossing", "Switch");
+        Map map41 = new Map("Parc Baby", "GCN", false);
+        Map map42 = new Map("Pays Fromage", "GBA", false);
+        Map map43 = new Map("Passage Feuillage", "Switch", false);
+        Map map44 = new Map("Animal Crossing", "Switch", false);
         //CLOCHETTE
-        Map map45 = new Map("Koopapolis", "3DS");
-        Map map46 = new Map("Route Ruban", "GBA");
-        Map map47 = new Map("Métro Turbo", "Switch");
-        Map map48 = new Map("Big Blue", "Switch");
+        Map map45 = new Map("Koopapolis", "3DS", false);
+        Map map46 = new Map("Route Ruban", "GBA", false);
+        Map map47 = new Map("Métro Turbo", "Switch", false);
+        Map map48 = new Map("Big Blue", "Switch", false);
 
         //PASS ADDITIONNEL//
         //TURBO DOREE
-        Map map49 = new Map("Promenade à Paris", "TOUR");
-        Map map50 = new Map("Circuit Toad", "3DS");
-        Map map51 = new Map("Montagne Choco", "N64");
-        Map map52 = new Map("Supermarché Coco", "WII");
+        Map map49 = new Map("Promenade à Paris", "TOUR", false);
+        Map map50 = new Map("Circuit Toad", "3DS", false);
+        Map map51 = new Map("Montagne Choco", "N64", false);
+        Map map52 = new Map("Supermarché Coco", "WII", false);
         //MANEKI-NEKO
-        Map map53 = new Map("Traversée de Tokyo", "TOUR");
-        Map map54 = new Map("Corniche Champignon", "DS");
-        Map map55 = new Map("Jardin volant", "GBA");
-        Map map56 = new Map("Dojo ninja", "TOUR");
+        Map map53 = new Map("Traversée de Tokyo", "TOUR", false);
+        Map map54 = new Map("Corniche Champignon", "DS", false);
+        Map map55 = new Map("Jardin volant", "GBA", false);
+        Map map56 = new Map("Dojo ninja", "TOUR", false);
         //NAVET
-        Map map57 = new Map("NC", "NC");
-        Map map58 = new Map("NC", "NC");
-        Map map59 = new Map("NC", "NC");
-        Map map60 = new Map("NC", "NC");
+        Map map57 = new Map("NC", "NC", false);
+        Map map58 = new Map("NC", "NC", false);
+        Map map59 = new Map("NC", "NC", false);
+        Map map60 = new Map("NC", "NC", false);
         //HELICO
-        Map map61 = new Map("NC", "NC");
-        Map map62 = new Map("NC", "NC");
-        Map map63 = new Map("NC", "NC");
-        Map map64 = new Map("NC", "NC");
+        Map map61 = new Map("NC", "NC", false);
+        Map map62 = new Map("NC", "NC", false);
+        Map map63 = new Map("NC", "NC", false);
+        Map map64 = new Map("NC", "NC", false);
         //PIERRE
-        Map map65 = new Map("NC", "NC");
-        Map map66 = new Map("NC", "NC");
-        Map map67 = new Map("NC", "NC");
-        Map map68 = new Map("NC", "NC");
+        Map map65 = new Map("NC", "NC", false);
+        Map map66 = new Map("NC", "NC", false);
+        Map map67 = new Map("NC", "NC", false);
+        Map map68 = new Map("NC", "NC", false);
         //LUNE
-        Map map69 = new Map("NC", "NC");
-        Map map70 = new Map("NC", "NC");
-        Map map71 = new Map("NC", "NC");
-        Map map72 = new Map("NC", "NC");
+        Map map69 = new Map("NC", "NC", false);
+        Map map70 = new Map("NC", "NC", false);
+        Map map71 = new Map("NC", "NC", false);
+        Map map72 = new Map("NC", "NC", false);
         //FRUIT
-        Map map73 = new Map("NC", "NC");
-        Map map74 = new Map("NC", "NC");
-        Map map75 = new Map("NC", "NC");
-        Map map76 = new Map("NC", "NC");
+        Map map73 = new Map("NC", "NC", false);
+        Map map74 = new Map("NC", "NC", false);
+        Map map75 = new Map("NC", "NC", false);
+        Map map76 = new Map("NC", "NC", false);
         //BOOMERANG
-        Map map77 = new Map("NC", "NC");
-        Map map78 = new Map("NC", "NC");
-        Map map79 = new Map("NC", "NC");
-        Map map80 = new Map("NC", "NC");
+        Map map77 = new Map("NC", "NC", false);
+        Map map78 = new Map("NC", "NC", false);
+        Map map79 = new Map("NC", "NC", false);
+        Map map80 = new Map("NC", "NC", false);
         //PLUME
-        Map map81 = new Map("NC", "NC");
-        Map map82 = new Map("NC", "NC");
-        Map map83 = new Map("NC", "NC");
-        Map map84 = new Map("NC", "NC");
+        Map map81 = new Map("NC", "NC", false);
+        Map map82 = new Map("NC", "NC", false);
+        Map map83 = new Map("NC", "NC", false);
+        Map map84 = new Map("NC", "NC", false);
         //CERISES
-        Map map85 = new Map("NC", "NC");
-        Map map86 = new Map("NC", "NC");
-        Map map87 = new Map("NC", "NC");
-        Map map88 = new Map("NC", "NC");
+        Map map85 = new Map("NC", "NC", false);
+        Map map86 = new Map("NC", "NC", false);
+        Map map87 = new Map("NC", "NC", false);
+        Map map88 = new Map("NC", "NC", false);
         //GLAND
-        Map map89 = new Map("NC", "NC");
-        Map map90 = new Map("NC", "NC");
-        Map map91 = new Map("NC", "NC");
-        Map map92 = new Map("NC", "NC");
+        Map map89 = new Map("NC", "NC", false);
+        Map map90 = new Map("NC", "NC", false);
+        Map map91 = new Map("NC", "NC", false);
+        Map map92 = new Map("NC", "NC", false);
         //EPINES
-        Map map93 = new Map("NC", "NC");
-        Map map94 = new Map("NC", "NC");
-        Map map95 = new Map("NC", "NC");
-        Map map96 = new Map("NC", "NC");
+        Map map93 = new Map("NC", "NC", false);
+        Map map94 = new Map("NC", "NC", false);
+        Map map95 = new Map("NC", "NC", false);
+        Map map96 = new Map("NC", "NC", false);
         //FIN CREATION MAPS
 
         //CREATION CUPS

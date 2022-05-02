@@ -6,17 +6,17 @@
     android:layout_height="wrap_content"
     tools:context=".RandomMaps">
 
-    <View
+    <pl.droidsonroids.gif.GifImageView
         android:id="@+id/backViewRandomSelect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:foreground="@drawable/mk8_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="1.25"
+        android:scaleY="1.25"
+        android:src="@drawable/animated_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/backgroundSelector"
@@ -48,7 +48,7 @@
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textMapName"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/fond_texte_map"

@@ -7,56 +7,57 @@
     android:fadingEdge="vertical"
     tools:context=".MapsSelector">
 
-    <View
-        android:id="@+id/backViewMapSelect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:foreground="@drawable/mk8_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <pl.droidsonroids.gif.GifImageView
+    android:id="@+id/backViewMapSelect"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:scaleX="1.25"
+    android:scaleY="1.25"
+    android:src="@drawable/animated_background"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/backViewMapSelect"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="50dp">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:height="20dp"
-                android:fontFamily="@font/mario_kart_f2"
-                android:shadowColor="#000000"
-                android:shadowRadius="20"
-                android:text="Choississez vos \ncoupes"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:visibility="visible" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:height="20dp"
+            android:fontFamily="@font/mario_kart_f2"
+            android:shadowColor="#000000"
+            android:shadowRadius="20"
+            android:text="Choississez vos \ncoupes"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
         <Switch
             android:id="@+id/switchMultiSelect"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/textView2"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
             android:layout_marginRight="30dp"
             android:checked="false"
             android:fontFamily="@font/baijamjuree_regular"
@@ -76,18 +77,18 @@
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="2dp"
+            android:layout_below="@+id/switchMultiSelect"
+            android:layout_marginTop="0dp"
             android:background="#D7000000" />
 
         <ScrollView
             android:id="@+id/scroll"
             style="@android:style/Widget.Material.ScrollView"
             android:layout_width="match_parent"
-            android:layout_height="661dp"
-            android:fadingEdge="horizontal|vertical|none"
-            android:fadingEdgeLength="10dp"
-            android:visibility="visible"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:visibility="visible">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/divider"
+            android:layout_marginBottom="75dp"
+            android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -95,6 +96,10 @@
                 android:orientation="vertical"
                 android:visibility="visible"
                 tools:visibility="visible">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Switch
                     android:id="@+id/switchClassic"
@@ -127,12 +132,12 @@
                     <ImageView
                         android:id="@+id/imageView1"
                         android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
                         android:elevation="12dp"
                         android:outlineAmbientShadowColor="#FF0000"
                         android:outlineSpotShadowColor="#FF0000"
-                        android:src="@drawable/cup_mushroom_emblem"
+                        android:src="@drawable/cup_coupe_champignon_icon"
                         android:visibility="visible"
                         tools:visibility="visible" />
 
@@ -141,7 +146,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_flower_emblem"
+                        android:src="@drawable/cup_coupe_fleur_icon"
                         android:visibility="visible" />
                 </LinearLayout>
 
@@ -157,16 +162,16 @@
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="wrap_content"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_star_emblem" />
+                        android:src="@drawable/cup_coupe_etoile_icon" />
 
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_special_emblem" />
+                        android:src="@drawable/cup_coupe_speciale_icon" />
                 </LinearLayout>
 
                 <Space
@@ -204,16 +209,16 @@
                     <ImageView
                         android:id="@+id/imageView5"
                         android:layout_width="wrap_content"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_shell_emblem" />
+                        android:src="@drawable/cup_coupe_carapace_icon" />
 
                     <ImageView
                         android:id="@+id/imageView6"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_banana_emblem" />
+                        android:src="@drawable/cup_coupe_banane_icon" />
                 </LinearLayout>
 
                 <Space
@@ -228,16 +233,16 @@
                     <ImageView
                         android:id="@+id/imageView7"
                         android:layout_width="wrap_content"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_leaf_emblem" />
+                        android:src="@drawable/cup_coupe_feuille_icon" />
 
                     <ImageView
                         android:id="@+id/imageView8"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_lightning_emblem" />
+                        android:src="@drawable/cup_coupe_eclair_icon" />
                 </LinearLayout>
 
                 <Space
@@ -276,16 +281,16 @@
                     <ImageView
                         android:id="@+id/imageView9"
                         android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_egg_emblem" />
+                        android:src="@drawable/cup_coupe_oeuf_icon" />
 
                     <ImageView
                         android:id="@+id/imageView10"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_triforce_emblem" />
+                        android:src="@drawable/cup_coupe_triforce_icon" />
                 </LinearLayout>
 
                 <Space
@@ -300,16 +305,16 @@
                     <ImageView
                         android:id="@+id/imageView11"
                         android:layout_width="wrap_content"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_crossing_emblem" />
+                        android:src="@drawable/cup_coupe_crossing_icon" />
 
                     <ImageView
                         android:id="@+id/imageView12"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_bell_emblem" />
+                        android:src="@drawable/cup_coupe_clochette_icon" />
                 </LinearLayout>
 
                 <Space
@@ -349,14 +354,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_bcp_lucky_cat_emblem" />
+                        android:src="@drawable/cup_coupe_maneki_neko_icon" />
 
                     <ImageView
                         android:id="@+id/imageView14"
                         android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_bcp_golden_dash_emblem" />
+                        android:src="@drawable/cup_coupe_turbo_doree_icon" />
                 </LinearLayout>
 
                 <Space
@@ -373,14 +378,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_propeller_emblem" />
+                        android:src="@drawable/cup_coupe_helico_icon" />
 
                     <ImageView
                         android:id="@+id/imageView16"
                         android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_turnip_emblem" />
+                        android:src="@drawable/cup_coupe_navet_icon" />
                 </LinearLayout>
 
                 <Space
@@ -395,16 +400,16 @@
                     <ImageView
                         android:id="@+id/imageView17"
                         android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_rock_emblem" />
+                        android:src="@drawable/cup_coup_pierre_icon" />
 
                     <ImageView
                         android:id="@+id/imageView18"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_moon_emblem" />
+                        android:src="@drawable/cup_coupe_lune_icon" />
                 </LinearLayout>
 
                 <Space
@@ -419,16 +424,16 @@
                     <ImageView
                         android:id="@+id/imageView19"
                         android:layout_width="wrap_content"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_fruit_emblem" />
+                        android:src="@drawable/cup_coup_fruit_icon" />
 
                     <ImageView
                         android:id="@+id/imageView20"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_boomerang_emblem" />
+                        android:src="@drawable/cup_coupe_boomerang_icon" />
                 </LinearLayout>
 
                 <Space
@@ -443,16 +448,16 @@
                     <ImageView
                         android:id="@+id/imageView21"
                         android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_feather_emblem" />
+                        android:src="@drawable/cup_coupe_plume_icon" />
 
                     <ImageView
                         android:id="@+id/imageView22"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_cherry_emblem" />
+                        android:src="@drawable/cup_coupe_cerise_icon" />
 
                 </LinearLayout>
 
@@ -468,16 +473,16 @@
                     <ImageView
                         android:id="@+id/imageView23"
                         android:layout_width="match_parent"
-                        android:layout_height="125dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_acorn_emblem" />
+                        android:src="@drawable/cup_coupe_gland_icon" />
 
                     <ImageView
                         android:id="@+id/imageView24"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_spiny_emblem" />
+                        android:src="@drawable/cup_coupe_a_epines_icon" />
                 </LinearLayout>
 
                 <Space
@@ -491,33 +496,29 @@
             android:id="@+id/divider2"
             android:layout_width="match_parent"
             android:layout_height="2dp"
+            android:layout_below="@+id/scroll"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-75dp"
+            android:layout_marginEnd="0dp"
             android:background="#D7000000" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonNext"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="50dp"
+            android:layout_below="@id/divider2"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_bouton"
+            android:fontFamily="@font/mario_kart_f2"
+            android:shadowColor="#000000"
+            android:shadowRadius="20"
+            android:text="Randomizer"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="normal"
+            android:visibility="visible"
+            tools:visibility="visible" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonNext"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:background="@drawable/ic_bouton"
-                android:fontFamily="@font/mario_kart_f2"
-                android:shadowColor="#000000"
-                android:shadowRadius="20"
-                android:text="Randomizer"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="normal"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:visibility="visible" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

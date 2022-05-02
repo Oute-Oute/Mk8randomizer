@@ -13,6 +13,7 @@ import android.widget.Switch;
 
 import com.example.mk8randomizer.maps.Cups;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -62,13 +63,7 @@ public class MapsSelector extends AppCompatActivity {
         buttonNext.setOnClickListener(new View.OnClickListener() {
                                           @Override
                                           public void onClick(View v) {
-                                              //création de la novelle page
-                                              Intent intent = new Intent(getApplicationContext(), RandomMaps.class);
-                                              //intent.putExtra("cups", cups);
-                                              //demarrage de la nouvelle page
-                                              startActivity(intent);
-                                              //animation de la transition
-                                              overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                                              openRandomizer();
                                           }
                                       }
         );
@@ -278,5 +273,23 @@ public class MapsSelector extends AppCompatActivity {
                 Objects.requireNonNull(imageViewHashMap.get(i + 4 * type)).setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
             }
         }
+    }
+    public void openRandomizer(){
+        ArrayList cupsToRandomize = new ArrayList();
+        for (int i = 0; i < cups.getCupTypes().size(); i++) {
+            for (int j = 0; j < cups.getCupTypes().get(i).getCups().size(); j++) {
+                if (cups.getCupTypes().get(i).getCups().get(j).getSelected()&&cups.getCupTypes().get(i).getCups().get(j).isAvailable()) {
+                    cupsToRandomize.add(cups.getCupTypes().get(i).getCups().get(j));
+                }
+            }
+        }
+        //création de la nouvelle page
+        Intent intent = new Intent(getApplicationContext(), RandomMaps.class);
+        intent.putExtra("cups", cupsToRandomize);
+        intent.putExtra("multiSelect", cups.isMultiSelect());
+        //demarrage de la nouvelle page
+        this.startActivity(intent);
+        //animation de la transition
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }
