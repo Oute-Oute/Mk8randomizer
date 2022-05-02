@@ -6,24 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".RandomVehicle">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:foreground="@drawable/mk8_background"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/backViewMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleX="1.25"
+        android:scaleY="1.25"
+        android:src="@drawable/animated_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/vehicleRandomizeFrame"
         android:layout_width="410dp"
         android:layout_height="317dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/backViewMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kart_select" />

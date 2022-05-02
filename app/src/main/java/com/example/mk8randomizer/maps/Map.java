@@ -1,13 +1,16 @@
 package com.example.mk8randomizer.maps;
 
-public class Map {
+import java.io.Serializable;
+
+public class Map implements Serializable {
     String name;
     String console;
-    boolean available;
+    boolean alreadySelected;
 
-    public Map(String name, String console) {
+    public Map(String name, String console, Boolean alreadySelected) {
         this.name = name;
         this.console = console;
+        this.alreadySelected = alreadySelected;
     }
 
     public String getName() {
@@ -20,5 +23,13 @@ public class Map {
 
     public void setConsole(String console) {
         this.console = console;
+    }
+
+    public Boolean getAlreadySelected() {
+        return alreadySelected;
+    }
+
+    public void setAlreadySelected(Boolean alreadySelected) {
+        this.alreadySelected = alreadySelected;
     }
 }

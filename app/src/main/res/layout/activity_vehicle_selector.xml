@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".VehicleSelector">
 
-    <View
-        android:id="@+id/backViewVehicleSelect"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/backViewMain"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:foreground="@drawable/mk8_background"
+        android:scaleX="1.25"
+        android:scaleY="1.25"
+        android:src="@drawable/animated_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pageTitle"
@@ -73,10 +73,10 @@
         android:id="@+id/moto_Standard_Mario_8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/backViewVehicleSelect"
+        app:layout_constraintBottom_toBottomOf="@+id/backViewMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backViewVehicleSelect"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vehicle_body_bike_moto_standard_mario_8" />
 
     <TextView
@@ -105,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/backViewVehicleSelect"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moto_Standard_Mario_8"
         app:srcCompat="@drawable/vehicle_body_quad_quad_standard_mario" />
 
@@ -124,8 +124,8 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/backViewVehicleSelect"
-        app:layout_constraintStart_toStartOf="@+id/backViewVehicleSelect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quad_Standard_Mario"
         tools:visibility="visible" />
 
