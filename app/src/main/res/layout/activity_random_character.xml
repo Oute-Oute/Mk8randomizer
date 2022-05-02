@@ -72,6 +72,6 @@
         app:layout_constraintEnd_toEndOf="@+id/backgroundSelector"
         app:layout_constraintStart_toStartOf="@+id/backgroundSelector"
         app:layout_constraintTop_toTopOf="@+id/backgroundSelector"
-        app:srcCompat="@drawable/mk8dx_metal_mario_icon" />
+        app:srcCompat="@drawable/character_metal_mario_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -132,7 +132,7 @@
                         android:elevation="12dp"
                         android:outlineAmbientShadowColor="#FF0000"
                         android:outlineSpotShadowColor="#FF0000"
-                        android:src="@drawable/mk8_mushroomcup"
+                        android:src="@drawable/cup_mushroom_emblem"
                         android:visibility="visible"
                         tools:visibility="visible" />
 
@@ -141,7 +141,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_flowercup"
+                        android:src="@drawable/cup_flower_emblem"
                         android:visibility="visible" />
                 </LinearLayout>
 
@@ -159,14 +159,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_star_cup_emblem" />
+                        android:src="@drawable/cup_star_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_special_cup_emblem" />
+                        android:src="@drawable/cup_special_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -206,14 +206,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_shell_cup_emblem" />
+                        android:src="@drawable/cup_shell_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView6"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_banana_cup_emblem" />
+                        android:src="@drawable/cup_banana_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -230,14 +230,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_leaf_cup_emblem" />
+                        android:src="@drawable/cup_leaf_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView8"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_lightning_cup_emblem" />
+                        android:src="@drawable/cup_lightning_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -278,14 +278,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_egg_cup_emblem" />
+                        android:src="@drawable/cup_egg_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView10"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_triforce_cup_emblem" />
+                        android:src="@drawable/cup_triforce_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -302,14 +302,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_crossing_cup_emblem" />
+                        android:src="@drawable/cup_crossing_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView12"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_bell_cup_emblem" />
+                        android:src="@drawable/cup_bell_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -349,14 +349,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8d_bcp_lucky_cat_emblem" />
+                        android:src="@drawable/cup_bcp_lucky_cat_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView14"
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8d_bcp_golden_dash_emblem" />
+                        android:src="@drawable/cup_bcp_golden_dash_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -373,14 +373,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_propeller_cup_emblem" />
+                        android:src="@drawable/cup_propeller_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView16"
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_turnip_cup_emblem" />
+                        android:src="@drawable/cup_turnip_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -397,14 +397,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_rock_cup_emblem" />
+                        android:src="@drawable/cup_rock_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView18"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_moon_cup_emblem" />
+                        android:src="@drawable/cup_moon_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -421,14 +421,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_fruit_cup_emblem" />
+                        android:src="@drawable/cup_fruit_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView20"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_boomerang_cup_emblem" />
+                        android:src="@drawable/cup_boomerang_emblem" />
                 </LinearLayout>
 
                 <Space
@@ -445,14 +445,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_feather_cup_emblem" />
+                        android:src="@drawable/cup_feather_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView22"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_cherry_cup_emblem" />
+                        android:src="@drawable/cup_cherry_emblem" />
 
                 </LinearLayout>
 
@@ -470,14 +470,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="125dp"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_acorn_cup_emblem" />
+                        android:src="@drawable/cup_acorn_emblem" />
 
                     <ImageView
                         android:id="@+id/imageView24"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/mk8_spiny_cup_emblem" />
+                        android:src="@drawable/cup_spiny_emblem" />
                 </LinearLayout>
 
                 <Space
