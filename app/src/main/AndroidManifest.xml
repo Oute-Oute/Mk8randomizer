@@ -13,14 +13,17 @@
         <activity
             android:name=".RandomCharacter"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen" />
             android:exported="false" />
         <activity
             android:name=".RandomVehicle"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen" />
             android:exported="false" />
         <activity
             android:name=".VehicleSelector"
             android:screenOrientation="portrait"
+            android:theme="@style/Theme.Mk8randomizer.Fullscreen" />
             android:exported="false" />
         <activity
             android:name=".StartupActivity"
