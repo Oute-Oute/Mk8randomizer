@@ -3,10 +3,13 @@ package com.example.mk8randomizer;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
@@ -36,11 +39,8 @@ public class MapsSelector extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps_selector);
-        View decorView = getWindow().getDecorView();
-// Hide the status bar.
-        int uiOptions = getWindow().getDecorView().getSystemUiVisibility();
-        uiOptions = uiOptions | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-        getWindow().getDecorView().setSystemUiVisibility(uiOptions);
+        View decorView = getWindow().getDecorView(); getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 // Remember that you should never show the action bar if the
 // status bar is hidden, so hide that too if necessary.
         ActionBar actionBar = getSupportActionBar();
@@ -283,6 +283,8 @@ public class MapsSelector extends AppCompatActivity {
                 }
             }
         }
+
+        if (cupsToRandomize.size()>0) {
         //création de la nouvelle page
         Intent intent = new Intent(getApplicationContext(), RandomMaps.class);
         intent.putExtra("cups", cupsToRandomize);
@@ -291,5 +293,19 @@ public class MapsSelector extends AppCompatActivity {
         this.startActivity(intent);
         //animation de la transition
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
+        else {
+            new AlertDialog.Builder(this)
+                    .setTitle("Pas de coupes!")
+                    .setMessage("Vous n'avez sélectionné aucune coupe, sélectionnez en au moins 1 pour lancer le randomizer.")
+
+                    // Specifying a listener allows you to take an action before dismissing the dialog.
+                    // The dialog is automatically dismissed when a dialog button is clicked.
+
+                    // A null listener allows the button to dismiss the dialog and take no further action.
+                    .setNegativeButton(android.R.string.no, null)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
     }
 }
