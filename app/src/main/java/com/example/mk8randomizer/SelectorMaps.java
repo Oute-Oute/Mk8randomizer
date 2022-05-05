@@ -4,7 +4,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -20,7 +19,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
-public class MapsSelector extends AppCompatActivity {
+public class SelectorMaps extends AppCompatActivity {
 
     private Cups cups = new Cups();
     private final HashMap<Integer, ImageView> imageViewHashMap = new HashMap<>();
@@ -38,7 +37,7 @@ public class MapsSelector extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps_selector);
+        setContentView(R.layout.activity_selector_maps);
         View decorView = getWindow().getDecorView(); getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 // Remember that you should never show the action bar if the
