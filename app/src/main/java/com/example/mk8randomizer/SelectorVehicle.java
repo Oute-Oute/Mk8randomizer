@@ -10,11 +10,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
 
-import java.util.Objects;
-
-public class VehicleSelector extends AppCompatActivity {
+public class SelectorVehicle extends AppCompatActivity {
 
     private ImageView imageKart, imageBike, imageQuad;
     private Button buttonVehicleNext;
@@ -29,7 +26,7 @@ public class VehicleSelector extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vehicle_selector);
+        setContentView(R.layout.activity_selector_vehicle);
         View decorView = getWindow().getDecorView();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fadingEdge="vertical"
     android:backgroundTint="#002245"
-    tools:context=".MapsSelector">
+    tools:context=".SelectorMaps">
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/backViewMapSelect"

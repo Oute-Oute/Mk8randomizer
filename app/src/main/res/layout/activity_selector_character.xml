@@ -4,30 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VehicleSelector">
+    tools:context=".SelectorCharacter">
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/backViewMain"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/backViewMapSelect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleX="1.40"
         android:scaleY="1.40"
         android:src="@drawable/animated_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/pageTitle"
+        android:id="@+id/pageTitleCharacter"
         android:layout_width="372dp"
-        android:layout_height="42dp"
+        android:layout_height="75dp"
         android:layout_marginTop="30dp"
         android:height="20dp"
         android:fontFamily="@font/mario_kart_f2"
         android:shadowColor="#000000"
         android:shadowRadius="20"
-        android:text="Choississez vos \nvehicules"
+        android:text="Choississez vos\ntypes de personnage"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
@@ -40,17 +42,18 @@
         tools:visibility="visible" />
 
     <ImageView
-        android:id="@+id/corps_Standard_Mario_MK8"
+        android:id="@+id/imageHeavy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/moto_Standard_Mario_8"
+        android:layout_marginTop="75dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageMedium"
         app:srcCompat="@drawable/vehicle_body_kart_corps_standard_mario" />
 
     <TextView
-        android:id="@+id/karts"
+        android:id="@+id/mediumText"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_margin="10dp"
@@ -58,7 +61,7 @@
         android:fontFamily="@font/mario_kart_f2"
         android:shadowColor="#000000"
         android:shadowRadius="20"
-        android:text="Karts"
+        android:text="Moyens"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
@@ -66,21 +69,22 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/corps_Standard_Mario_MK8"
+        app:layout_constraintTop_toBottomOf="@+id/imageMedium"
         tools:visibility="visible" />
 
     <ImageView
-        android:id="@+id/moto_Standard_Mario_8"
+        android:id="@+id/imageLight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/backViewMain"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageMedium"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vehicle_body_bike_moto_standard_mario_8" />
 
     <TextView
-        android:id="@+id/motos"
+        android:id="@+id/heavyText"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_margin="10dp"
@@ -88,29 +92,29 @@
         android:fontFamily="@font/mario_kart_f2"
         android:shadowColor="#000000"
         android:shadowRadius="20"
-        android:text="Motos"
+        android:text="Lourds"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/moto_Standard_Mario_8"
-        app:layout_constraintStart_toStartOf="@+id/moto_Standard_Mario_8"
-        app:layout_constraintTop_toBottomOf="@+id/moto_Standard_Mario_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHeavy"
         tools:visibility="visible" />
 
     <ImageView
-        android:id="@+id/quad_Standard_Mario"
+        android:id="@+id/imageMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moto_Standard_Mario_8"
+        app:layout_constraintTop_toTopOf="@+id/backViewMapSelect"
         app:srcCompat="@drawable/vehicle_body_quad_quad_standard_mario" />
 
     <TextView
-        android:id="@+id/quads"
+        android:id="@+id/lightText"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_margin="10dp"
@@ -118,34 +122,35 @@
         android:fontFamily="@font/mario_kart_f2"
         android:shadowColor="#000000"
         android:shadowRadius="20"
-        android:text="Quads"
+        android:text="Legers"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quad_Standard_Mario"
+        app:layout_constraintTop_toBottomOf="@+id/imageLight"
         tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonVehiclesNext"
+        android:id="@+id/buttonNextCharacter"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/ic_bouton"
         android:fontFamily="@font/mario_kart_f2"
+        android:padding="17dp"
         android:shadowColor="#000000"
         android:shadowRadius="20"
-        android:text="Randomizer"
+        android:text="Selectionner"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textStyle="normal"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="visible" />
 

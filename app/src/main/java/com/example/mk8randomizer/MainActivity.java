@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         characterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openRandomCharacter();
+                openSelectorCharacter();
             }     });
     }
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
      * Opens the MapsSelectorActivity when the right button is clicked
      */
     public void openMapsSelector() {
-        Intent intent = new Intent(this, MapsSelector.class);
+        Intent intent = new Intent(this, SelectorMaps.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
@@ -65,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
      * Opens the VehiclesSelectorActivity when the right button is clicked
      */
     public void openVehicleSelector() {
-        Intent intent = new Intent(this, VehicleSelector.class);
+        Intent intent = new Intent(this, SelectorVehicle.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
-    public void openRandomCharacter() {
-        Intent intent = new Intent(this, RandomCharacter.class);
+    public void openSelectorCharacter() {
+        Intent intent = new Intent(this, SelectorCharacter.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
