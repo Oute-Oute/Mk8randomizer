@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 openVehicleSelector();
             }     });
 
-        characterButton = findViewById(R.id.characterButton);
+        characterButton = findViewById(R.id.randomCharacterButton);
         //si appuie sur le bouton "Personnages", on ouvre l'activité RandomCharacter
         characterButton.setOnClickListener(new View.OnClickListener() {
             @Override

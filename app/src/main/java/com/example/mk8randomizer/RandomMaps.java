@@ -3,15 +3,11 @@ package com.example.mk8randomizer;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -21,12 +17,10 @@ import android.widget.TextView;
 import com.example.mk8randomizer.maps.Cup;
 import com.example.mk8randomizer.maps.Map;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 import java.util.Timer;
-import java.util.TimerTask;
 
 public class RandomMaps extends AppCompatActivity {
 
@@ -59,14 +53,14 @@ public class RandomMaps extends AppCompatActivity {
         firstMap = findViewById(R.id.firstMap);
         secondMap = findViewById(R.id.secondMap);
         thirdMap = findViewById(R.id.thirdMap);
-        textMapName = findViewById(R.id.textMapName);
+        textMapName = findViewById(R.id.textCharacterName);
         reSelectButton = findViewById(R.id.reSelectButton);
         cupIcon = findViewById(R.id.cupIcon);
         firstMap.setColorFilter(0x99999999,PorterDuff.Mode.MULTIPLY);
         thirdMap.setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
         reSelectButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Map randomMap = Randomize();
                 AnimationSelectedMap(randomMap);
                 /*ChangeImage.schedule(new TimerTask() {

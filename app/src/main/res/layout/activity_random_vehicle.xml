@@ -20,10 +20,11 @@
 
     <ImageView
         android:id="@+id/vehicleRandomizeFrame"
-        android:layout_width="410dp"
-        android:layout_height="317dp"
+        android:layout_width="413dp"
+        android:layout_height="339dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/backViewMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kart_select" />
@@ -42,9 +43,86 @@
         android:textStyle="normal"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintTop_toBottomOf="@+id/imageView29"
         tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/selectedBodyImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintStart_toStartOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintVertical_bias="0.497"
+        app:srcCompat="@drawable/vehicle_body_kart_corps_kart_standard_8" />
+
+    <ImageView
+        android:id="@+id/selectedWheelImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintEnd_toStartOf="@+id/selectedWingImage"
+        app:layout_constraintStart_toEndOf="@+id/selectedBodyImage"
+        app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
+        app:srcCompat="@drawable/vehicle_wheel_roue_standard_8" />
+
+    <ImageView
+        android:id="@+id/selectedWingImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintEnd_toEndOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintVertical_bias="0.502"
+        app:srcCompat="@drawable/vehicle_wingl_aile_standard_8" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="411dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="-55dp"
+        app:layout_constraintEnd_toEndOf="@+id/backViewMain"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/backViewMain"
+        app:layout_constraintTop_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:srcCompat="@drawable/fond_texte_map" />
+
+    <TextView
+        android:id="@+id/selectedBodyName"
+        android:layout_width="129dp"
+        android:layout_height="19dp"
+        android:text="Standard"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        app:layout_constraintEnd_toEndOf="@+id/selectedBodyImage"
+        app:layout_constraintStart_toStartOf="@+id/selectedBodyImage"
+        app:layout_constraintTop_toTopOf="@+id/imageView29"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <TextView
+        android:id="@+id/selectedWheelName"
+        android:layout_width="123dp"
+        android:layout_height="19dp"
+        android:text="Standard"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        app:layout_constraintEnd_toEndOf="@+id/selectedWheelImage"
+        app:layout_constraintStart_toStartOf="@+id/selectedWheelImage"
+        app:layout_constraintTop_toTopOf="@+id/imageView29" />
+
+    <TextView
+        android:id="@+id/selectedWingName"
+        android:layout_width="127dp"
+        android:layout_height="20dp"
+        android:text="Standard"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        app:layout_constraintEnd_toEndOf="@+id/selectedWingImage"
+        app:layout_constraintStart_toStartOf="@+id/selectedWingImage"
+        app:layout_constraintTop_toTopOf="@+id/imageView29" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

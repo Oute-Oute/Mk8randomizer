@@ -1,42 +1,52 @@
 package com.example.mk8randomizer.vehicles;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class Parts {
+public class Parts implements Serializable {
     private ArrayList<Part> Wheel;
     private ArrayList<Part> Wing;
     private ArrayList<Part> Body;
-        private ArrayList<Part> Kart;
-        private ArrayList<Part> Bike;
-        private ArrayList<Part> Quad;
+    private ArrayList<Part> Kart;
+    private ArrayList<Part> Bike;
+    private ArrayList<Part> Quad;
+    private boolean isSelectedKart= true, isSelectedBike=true, isSelectedQuad = true;
 
-    public Parts(){
+    public Parts() {
+
+        Wheel = new ArrayList<>();
+        Wing = new ArrayList<>();
+        Body = new ArrayList<>();
+        Kart = new ArrayList<>();
+        Bike = new ArrayList<>();
+        Quad = new ArrayList<>();
 
         //BODY
         //KARTS
         //Create Karts
-        Part Kart1 = new Part("300 SL Roaster", "Body");
-        Part Kart2 = new Part("Beat Bolide", "Body");
-        Part Kart3 = new Part("Blue Falcon", "Body");
-        Part Kart4 = new Part("Caraveloce", "Body");
-        Part Kart5 = new Part("Chabriolet", "Body");
-        Part Kart6 = new Part("Autorhino", "Body");
-        Part Kart7 = new Part("Buggy Tanuki", "Body");
-        Part Kart8 = new Part("Cavalkart", "Body");
-        Part Kart9 = new Part("Intrepide", "Body");
-        Part Kart10 = new Part("Magikart", "Body");
-        Part Kart11 = new Part("Nautomobile", "Body");
-        Part Kart12 = new Part("Or", "Body");
-        Part Kart13 = new Part("Propulsar", "Body");
-        Part Kart14 = new Part("Proto", "Body");
-        Part Kart15 = new Part("Retro", "Body");
-        Part Kart16 = new Part("Sneakart", "Body");
-        Part Kart17 = new Part("Standard", "Body");
-        Part Kart18 = new Part("TubulR3", "Body");
-        Part Kart19 = new Part("W25 Fleche DArgent", "Body");
-        Part Kart20 = new Part("GLA", "Body");
-        Part Kart21 = new Part("Mach-celere", "Body");
-        Part Kart22 = new Part("Paracoccinelle", "Body");
+        Part Kart1 = new Part("300 SL Roaster", "Kart");
+        Part Kart2 = new Part("Beat Bolide", "Kart");
+        Part Kart3 = new Part("Blue Falcon", "Kart");
+        Part Kart4 = new Part("Caraveloce", "Kart");
+        Part Kart5 = new Part("Chabriolet", "Kart");
+        Part Kart6 = new Part("Autorhino", "Kart");
+        Part Kart7 = new Part("Buggy Tanuki", "Kart");
+        Part Kart8 = new Part("Cavalkart", "Kart");
+        Part Kart9 = new Part("Intrepide", "Kart");
+        Part Kart10 = new Part("Magikart", "Kart");
+        Part Kart11 = new Part("Nautomobile", "Kart");
+        Part Kart12 = new Part("Or", "Kart");
+        Part Kart13 = new Part("Propulsar", "Kart");
+        Part Kart14 = new Part("Proto", "Kart");
+        Part Kart15 = new Part("Retro", "Kart");
+        Part Kart16 = new Part("Sneakart", "Kart");
+        Part Kart17 = new Part("Kart Standard", "Kart");
+        Part Kart18 = new Part("TubulR3", "Kart");
+        Part Kart19 = new Part("W25 Fleche DArgent", "Kart");
+        Part Kart20 = new Part("GLA", "Kart");
+        Part Kart21 = new Part("Mach-celere", "Kart");
+        Part Kart22 = new Part("Paracoccinelle", "Kart");
         //Add Karts to ArrayList
         Kart.add(Kart1);
         Kart.add(Kart2);
@@ -63,17 +73,17 @@ public class Parts {
 
         //BIKES
         //Create Bikes
-        Part Bike1 = new Part("Cybertrombe", "Body");
-        Part Bike2 = new Part("Destrier De Legende", "Body");
-        Part Bike3 = new Part("Epervier", "Body");
-        Part Bike4 = new Part("Flamboyante", "Body");
-        Part Bike5 = new Part("Mecabecane", "Body");
-        Part Bike6 = new Part("Meteore", "Body");
-        Part Bike7 = new Part("Scooter", "Body");
-        Part Bike8 = new Part("Scootinette", "Body");
-        Part Bike9 = new Part("Sport GP", "Body");
-        Part Bike10 = new Part("Yoshimoto", "Body");
-        Part Bike11 = new Part("Standard", "Body");
+        Part Bike1 = new Part("Cybertrombe", "Bike");
+        Part Bike2 = new Part("Destrier De Legende", "Bike");
+        Part Bike3 = new Part("Epervier", "Bike");
+        Part Bike4 = new Part("Flamboyante", "Bike");
+        Part Bike5 = new Part("Mecabecane", "Bike");
+        Part Bike6 = new Part("Meteore", "Bike");
+        Part Bike7 = new Part("Scooter", "Bike");
+        Part Bike8 = new Part("Scootinette", "Bike");
+        Part Bike9 = new Part("Sport GP", "Bike");
+        Part Bike10 = new Part("Yoshimoto", "Bike");
+        Part Bike11 = new Part("Moto Standard", "Bike");
         //Add Bikes to ArrayList
         Bike.add(Bike1);
         Bike.add(Bike2);
@@ -89,10 +99,10 @@ public class Parts {
 
         //QUADS
         //Create Quads
-        Part Quad1 = new Part("Malecycle", "Body");
-        Part Quad2 = new Part("Quad Nounours", "Body");
-        Part Quad3 = new Part("Quad Wiggler", "Body");
-        Part Quad4 = new Part("Quad Standard", "Body");
+        Part Quad1 = new Part("Malecycle", "Quad");
+        Part Quad2 = new Part("Quad Nounours", "Quad");
+        Part Quad3 = new Part("Quad Wiggler", "Quad");
+        Part Quad4 = new Part("Quad Standard", "Quad");
         //Add Quads to ArrayList
         Quad.add(Quad1);
         Quad.add(Quad2);
@@ -185,9 +195,19 @@ public class Parts {
         Wing.add(Wing14);
     }
 
+    public void setSelectedBike(boolean b) {
+        isSelectedBike = b;
+    }
+    public void setSelectedKart(boolean b) {
+        isSelectedKart = b;
+    }
+    public void setSelectedQuad(boolean b) {
+        isSelectedQuad = b;
+    }
+
     //Getters
-    public Part getBody(int i, int j){
-        switch (i){
+    public Part getBody(int i, int j) {
+        switch (i) {
             case 0:
                 return getKart(j);
             case 1:
@@ -197,43 +217,69 @@ public class Parts {
         }
         return null;
     }
-    private ArrayList<Part> getBody(){
+    public ArrayList<Part> getBody(int bodyType) {
+        switch (bodyType) {
+            case 0: return getKart();
+            case 1: return getBike();
+            case 2: return getQuad();
+        }
+        return null;
+    }
+    private ArrayList<Part> getBody() {
         return Body;
     }
 
     private Part getQuad(int j) {
         return Quad.get(j);
     }
-    private ArrayList<Part> getQuad(){
+    private ArrayList<Part> getQuad() {
         return Quad;
     }
 
     private Part getBike(int j) {
         return Bike.get(j);
     }
-    private ArrayList<Part> getBike(){
+    private ArrayList<Part> getBike() {
         return Bike;
     }
 
     private Part getKart(int j) {
         return Kart.get(j);
     }
-    private ArrayList<Part> getKart(){
+    private ArrayList<Part> getKart() {
         return Kart;
     }
 
-    private Part getWheel(int j) {
+    public Part getWheel(int j) {
         return Wheel.get(j);
     }
-    private ArrayList<Part> getWheel(){
+    public ArrayList<Part> getWheel() {
         return Wheel;
     }
 
-    private Part getWing(int j) {
+    public Part getWing(int j) {
         return Wing.get(j);
     }
-    private ArrayList<Part> getWing(){
+    public ArrayList<Part> getWing() {
         return Wing;
     }
-}
 
+    public boolean isSelectedBike() {
+        return isSelectedBike;
+    }
+    public boolean isSelectedKart() {
+        return isSelectedKart;
+    }
+    public boolean isSelectedQuad() {
+        return isSelectedQuad;
+    }
+    public boolean isSelectedBodyType(int i) {
+        switch (i) {
+            case 0: return isSelectedKart;
+            case 1: return isSelectedBike;
+            case 2: return isSelectedQuad;
+        }
+        return false;
+    }
+
+}

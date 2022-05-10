@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/map_select" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/mapsButton2"
+        android:id="@+id/randomCharacterButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/ic_bouton"
@@ -48,7 +48,7 @@
         tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/textMapName"
+        android:id="@+id/textCharacterName"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/fond_texte_map"
@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView25"
+        android:id="@+id/character"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundSelector"

@@ -6,16 +6,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.mk8randomizer.vehicles.Parts;
+
+import java.io.Serializable;
+
 public class SelectorVehicle extends AppCompatActivity {
 
     private ImageView imageKart, imageBike, imageQuad;
     private Button buttonVehicleNext;
-    boolean isSelectedKart = true, isSelectedBike = true, isSelectedQuad = true;
+    private Parts parts = new Parts();
 
     /**
      * @param savedInstanceState
@@ -41,6 +46,7 @@ public class SelectorVehicle extends AppCompatActivity {
             public void onClick(View v) {
                 //création de la novelle page
                 Intent intent = new Intent(getApplicationContext(), RandomVehicle.class);
+                intent.putExtra("parts", parts);
                 //demarrage de la nouvelle page
                 startActivity(intent);
                 //animation de la transition
@@ -67,7 +73,6 @@ public class SelectorVehicle extends AppCompatActivity {
         });
     }
 
-
     public void initializeItems(){
         imageKart = findViewById(R.id.corps_Standard_Mario_MK8);
         imageBike = findViewById(R.id.moto_Standard_Mario_8);
@@ -78,29 +83,29 @@ public class SelectorVehicle extends AppCompatActivity {
     public void BodyClick(View v){
         switch (v.getId()){
             case R.id.corps_Standard_Mario_MK8:
-                if (isSelectedKart && (isSelectedBike || isSelectedQuad)){
-                    isSelectedKart = false;
+                if (parts.isSelectedKart() && (parts.isSelectedBike() || parts.isSelectedQuad())){
+                    parts.setSelectedKart(false);
                     imageKart.setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);}
                 else{
-                    isSelectedKart = true;
+                    parts.setSelectedKart(true);
                     imageKart.setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);}
                 break;
 
             case R.id.moto_Standard_Mario_8:
-                if (isSelectedBike &&(isSelectedKart || isSelectedQuad)){
-                    isSelectedBike = false;
+                if (parts.isSelectedBike() &&(parts.isSelectedKart() || parts.isSelectedQuad())){
+                    parts.setSelectedBike(false);
                     imageBike.setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);}
                 else{
-                    isSelectedBike = true;
+                    parts.setSelectedBike(true);
                     imageBike.setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);}
                 break;
 
             case R.id.quad_Standard_Mario:
-                if (isSelectedQuad&&(isSelectedKart || isSelectedBike)){
-                    isSelectedQuad = false;
+                if (parts.isSelectedQuad()&&(parts.isSelectedKart() || parts.isSelectedBike())){
+                    parts.setSelectedQuad(false);
                     imageQuad.setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);}
                 else{
-                    isSelectedQuad = true;
+                    parts.setSelectedQuad(true);
                     imageQuad.setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);}
                 break;
         }

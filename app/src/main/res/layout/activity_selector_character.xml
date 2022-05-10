@@ -50,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageMedium"
-        app:srcCompat="@drawable/vehicle_body_kart_corps_standard_mario" />
+        app:srcCompat="@drawable/character_bowser_icon" />
 
     <TextView
         android:id="@+id/mediumText"
@@ -81,7 +81,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vehicle_body_bike_moto_standard_mario_8" />
+        app:srcCompat="@drawable/character_toad_icon" />
 
     <TextView
         android:id="@+id/heavyText"
@@ -111,7 +111,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backViewMapSelect"
-        app:srcCompat="@drawable/vehicle_body_quad_quad_standard_mario" />
+        app:srcCompat="@drawable/character_mario_icon" />
 
     <TextView
         android:id="@+id/lightText"

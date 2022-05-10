@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class RandomCharacter extends AppCompatActivity {
 
     private ImageView middleCharacter;
+    private Button randomButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
