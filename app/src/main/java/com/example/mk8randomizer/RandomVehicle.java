@@ -21,6 +21,9 @@ import java.util.Random;
 public class RandomVehicle extends AppCompatActivity {
 
     private Button vehicleRandomizeButton;
+    private Button wingRandomizeButton;
+    private Button wheelRandomizeButton;
+    private Button bodyRandomizeButton;
     private ImageView selectedBodyImage;
     private ImageView selectedWheelImage;
     private ImageView selectedWingImage;
@@ -51,6 +54,9 @@ public class RandomVehicle extends AppCompatActivity {
 
     private void initItems() {
         vehicleRandomizeButton = findViewById(R.id.vehicleRandomizeButton);
+        wingRandomizeButton = findViewById(R.id.wingRandomizeButton);
+        wheelRandomizeButton = findViewById(R.id.wheelRandomizeButton);
+        bodyRandomizeButton = findViewById(R.id.bodyRandomizeButton);
         selectedBodyImage = findViewById(R.id.selectedBodyImage);
         selectedWheelImage = findViewById(R.id.selectedWheelImage);
         selectedWingImage = findViewById(R.id.selectedWingImage);
@@ -63,11 +69,28 @@ public class RandomVehicle extends AppCompatActivity {
                 randomizeVehicle();
             }
         });
+        wingRandomizeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                randomizeWing();
+            }
+        });
+        wheelRandomizeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                randomizeWheel();
+            }
+        });
+        bodyRandomizeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                randomizeBody();
+            }
+        });
     }
 
-    private void randomizeVehicle() {
-        //randomize body
-            //randomize body type
+    private void randomizeBody() {
+        //randomize body type
         Random randomBodyType = new Random();
         //We get a random body type, and we keep getting a new one until the body type is a selected one
         int bodyType = randomBodyType.nextInt(3);
@@ -80,19 +103,34 @@ public class RandomVehicle extends AppCompatActivity {
         // then we set the image and the name
         selectedBodyImage.setImageResource(context.getResources().getIdentifier(selectedBody.getImageName(), "drawable", context.getPackageName()));
         selectedBodyName.setText(selectedBody.getName());
+    }
 
-        //randomize wheel
-        int wheelPart = randomBodyType.nextInt(parts.getWheel().size());
+    private void randomizeWheel() {
+        Random random = new Random();
+        int wheelPart = random.nextInt(parts.getWheel().size());
         Part selectedWheel = parts.getWheel(wheelPart);
         selectedWheelImage.setImageResource(context.getResources().getIdentifier(selectedWheel.getImageName(), "drawable", context.getPackageName()));
         selectedWheelName.setText(selectedWheel.getName());
+    }
 
+    private void randomizeWing() {
         //randomize wing
-        int wingPart = randomBodyType.nextInt(parts.getWing().size());
+        Random random = new Random();
+        int wingPart = random.nextInt(parts.getWing().size());
         Part selectedWing = parts.getWing(wingPart);
         selectedWingImage.setImageResource(context.getResources().getIdentifier(selectedWing.getImageName(), "drawable", context.getPackageName()));
         selectedWingName.setText(selectedWing.getName());
     }
 
+    private void randomizeVehicle() {
+        //randomize body
+        randomizeBody();
+
+        //randomize wheel
+        randomizeWheel();
+
+        //randomize wing
+        randomizeWing();
+    }
 
 }
