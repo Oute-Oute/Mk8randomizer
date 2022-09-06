@@ -94,15 +94,15 @@ public class Cups implements Serializable{
         Map map55 = new Map("Jardin volant", "GBA", false);
         Map map56 = new Map("Dojo ninja", "TOUR", false);
         //NAVET
-        Map map57 = new Map("NC", "NC", false);
-        Map map58 = new Map("NC", "NC", false);
-        Map map59 = new Map("NC", "NC", false);
-        Map map60 = new Map("NC", "NC", false);
+        Map map57 = new Map("Escapade New-Yorkaise", "TOUR", false);
+        Map map58 = new Map("Circuit Mario 3", "SNES", false);
+        Map map59 = new Map("Desert Kalimari", "N64", false);
+        Map map60 = new Map("Flippeur Waluigi", "DS", false);
         //HELICO
-        Map map61 = new Map("NC", "NC", false);
-        Map map62 = new Map("NC", "NC", false);
-        Map map63 = new Map("NC", "NC", false);
-        Map map64 = new Map("NC", "NC", false);
+        Map map61 = new Map("Sprint a Sydney", "TOUR", false);
+        Map map62 = new Map("Pays neigeux", "GBA", false);
+        Map map63 = new Map("Gorge champignon", "WII", false);
+        Map map64 = new Map("Cite sorbet", "Switch", false);
         //PIERRE
         Map map65 = new Map("NC", "NC", false);
         Map map66 = new Map("NC", "NC", false);
@@ -160,8 +160,8 @@ public class Cups implements Serializable{
         Cup cup12 = new Cup("Coupe Clochette", map45, map46, map47, map48, "DLC", true);
         Cup cup13 = new Cup("Coupe Turbo Dorée", map49, map50, map51, map52, "Pass Additionnel", true);
         Cup cup14 = new Cup("Coupe Maneki-Neko", map53, map54, map55, map56, "Pass Additionnel", true);
-        Cup cup15 = new Cup("Coupe Navet", map57, map58, map59, map60, "Pass Additionnel", false);
-        Cup cup16 = new Cup("Coupe Hélico", map61, map62, map63, map64, "Pass Additionnel", false);
+        Cup cup15 = new Cup("Coupe Navet", map57, map58, map59, map60, "Pass Additionnel", true);
+        Cup cup16 = new Cup("Coupe Hélico", map61, map62, map63, map64, "Pass Additionnel", true);
         Cup cup17 = new Cup("Coupe Pierre", map65, map66, map67, map68, "Pass Additionnel", false);
         Cup cup18 = new Cup("Coupe Lune", map69, map70, map71, map72, "Pass Additionnel", false);
         Cup cup19 = new Cup("Coupe Fruit", map73, map74, map75, map76, "Pass Additionnel", false);
