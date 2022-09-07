@@ -20,9 +20,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/homeButtonMS"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_home" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,21 +45,21 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="45dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:height="20dp"
             android:fontFamily="@font/mario_kart_f2"
             android:shadowColor="#000000"
             android:shadowRadius="20"
-            android:text="Choississez vos \ncoupes"
+            android:text="Choississez vos\ncoupes"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textSize="16dp"
             android:visibility="visible"
             tools:visibility="visible" />
 
@@ -58,7 +69,7 @@
             android:layout_height="60dp"
             android:layout_below="@+id/textView2"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="-20dp"
             android:layout_marginRight="30dp"
             android:checked="false"
             android:fontFamily="@font/baijamjuree_regular"
@@ -68,7 +79,7 @@
             android:textAlignment="textStart"
             android:textColor="#FFFFFF"
             android:textColorLink="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:thumb="@drawable/thumb"
             android:track="@drawable/track"
@@ -116,7 +127,7 @@
                     android:textAlignment="textStart"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     android:thumb="@drawable/thumb"
                     android:track="@drawable/track" />
@@ -193,7 +204,7 @@
                     android:textAlignment="viewStart"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     android:thumb="@drawable/thumb"
                     android:track="@drawable/track" />
@@ -264,7 +275,7 @@
                     android:textAlignment="viewStart"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     android:thumb="@drawable/thumb"
                     android:track="@drawable/track"
@@ -336,7 +347,7 @@
                     android:textAlignment="viewStart"
                     android:textColor="#FFFFFF"
                     android:textColorLink="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     android:thumb="@drawable/thumb"
                     android:track="@drawable/track" />
@@ -513,9 +524,10 @@
             android:fontFamily="@font/mario_kart_f2"
             android:shadowColor="#000000"
             android:shadowRadius="20"
-            android:text="Randomizer"
+            android:text="Selectionner"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
+            android:textSize="14dp"
             android:textStyle="normal"
             android:visibility="visible"
             tools:visibility="visible" />

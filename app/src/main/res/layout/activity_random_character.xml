@@ -20,58 +20,118 @@
 
     <ImageView
         android:id="@+id/backgroundSelector"
-        android:layout_width="326dp"
-        android:layout_height="592dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backViewRandomSelect"
         app:srcCompat="@drawable/map_select" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/randomCharacterButton"
+        android:id="@+id/vehiclesButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/ic_bouton"
         android:fontFamily="@font/mario_kart_f2"
+        android:padding="20dp"
         android:shadowColor="#000000"
         android:shadowRadius="20"
         android:text="Selectionner"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:textSize="14dp"
         android:textStyle="normal"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backgroundSelector"
+        app:layout_constraintTop_toBottomOf="@+id/textCharacterName"
         tools:visibility="visible" />
 
     <TextView
         android:id="@+id/textCharacterName"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/fond_texte_map"
         android:fontFamily="@font/baijamjuree_regular"
         android:padding="10dp"
         android:text="Mario de métal"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/backgroundSelector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundSelector" />
 
     <ImageView
-        android:id="@+id/character"
+        android:id="@+id/secondCharacter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/backgroundSelector"
         app:layout_constraintEnd_toEndOf="@+id/backgroundSelector"
         app:layout_constraintStart_toStartOf="@+id/backgroundSelector"
         app:layout_constraintTop_toTopOf="@+id/backgroundSelector"
-        app:srcCompat="@drawable/character_metal_mario_icon" />
+        app:srcCompat="@drawable/character_mario_icon" />
+
+    <ImageView
+        android:id="@+id/firstCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundSelector"
+        app:layout_constraintStart_toStartOf="@+id/backgroundSelector"
+        app:layout_constraintTop_toTopOf="@+id/backgroundSelector"
+        app:srcCompat="@drawable/character_bebe_mario_icon" />
+
+    <ImageView
+        android:id="@+id/thirdCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundSelector"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundSelector"
+        app:layout_constraintStart_toStartOf="@+id/backgroundSelector"
+        app:srcCompat="@drawable/character_mario_de_metal_icon" />
+
+    <ImageView
+        android:id="@+id/strokeSelector2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundSelector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundSelector"
+        app:srcCompat="@drawable/map_select_contour" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/vehiclesButton2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_bouton"
+        android:fontFamily="@font/mario_kart_f2"
+        android:shadowColor="#000000"
+        android:shadowRadius="20"
+        android:text="Vehicules"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehiclesButton" />
+
+    <ImageView
+        android:id="@+id/homeButtonRC"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

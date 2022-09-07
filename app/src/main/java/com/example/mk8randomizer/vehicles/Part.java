@@ -38,6 +38,7 @@ public class Part implements Serializable {
         name = name.replace("î", "i");
         name = name.replace("ï", "i");
         name = name.replace("û", "u");
+        name = name.replace(".", "_");
         switch (this.getType()) {
             case "Kart": name = "vehicle_body_kart_corps_" + name+"_8"; break;
             case "Bike": name = "vehicle_body_bike_corps_" + name+"_8"; break;

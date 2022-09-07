@@ -1,12 +1,14 @@
 package com.example.mk8randomizer.Characters;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Characters {
+public class Characters implements Serializable {
     private ArrayList<ArrayList<Character>> characters;
-    private ArrayList<Character> lightCharacters;
-    private ArrayList<Character> mediumCharacters;
-    private ArrayList<Character> heavyCharacters;
+    static ArrayList<Character> lightCharacters;
+    static ArrayList<Character> mediumCharacters;
+    static ArrayList<Character> heavyCharacters;
+    public static Character mii = new Character("Mii");
 
     public Characters() {
         //Array Creation
@@ -50,7 +52,6 @@ public class Characters {
         Character medium11 = new Character("Villageoise");
         Character medium12 = new Character("Garçon Inkling");
         Character medium13 = new Character("Fille Inkling");
-        Character medium14 = new Character("Mii");
 
         //Heavy Characters creation
         Character heavy1 = new Character("Bowser");
@@ -98,7 +99,6 @@ public class Characters {
         mediumCharacters.add(medium11);
         mediumCharacters.add(medium12);
         mediumCharacters.add(medium13);
-        mediumCharacters.add(medium14);
         //Heavy Characters
         heavyCharacters.add(heavy1);
         heavyCharacters.add(heavy2);
@@ -113,5 +113,21 @@ public class Characters {
         heavyCharacters.add(heavy11);
         heavyCharacters.add(heavy12);
 
+
+    }
+
+
+
+    //Getters
+    public static ArrayList<Character> getLightCharacters() {
+        return lightCharacters;
+    }
+
+    public static ArrayList<Character> getMediumCharacters() {
+        return mediumCharacters;
+    }
+
+    public static ArrayList<Character> getHeavyCharacters() {
+        return heavyCharacters;
     }
 }

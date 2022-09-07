@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +25,7 @@ import java.util.Timer;
 
 public class RandomMaps extends AppCompatActivity {
 
-    private ImageView firstMap, secondMap, thirdMap, cupIcon;
+    private ImageView firstMap, secondMap, thirdMap, cupIcon, buttonHome;
     private TextView textMapName;
     private Button reSelectButton;
     private ArrayList<Cup> cupsToRandomize;
@@ -50,61 +51,7 @@ public class RandomMaps extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         //test d'affichage des maps dans le layout
-        firstMap = findViewById(R.id.firstMap);
-        secondMap = findViewById(R.id.secondMap);
-        thirdMap = findViewById(R.id.thirdMap);
-        textMapName = findViewById(R.id.textCharacterName);
-        reSelectButton = findViewById(R.id.reSelectButton);
-        cupIcon = findViewById(R.id.cupIcon);
-        firstMap.setColorFilter(0x99999999,PorterDuff.Mode.MULTIPLY);
-        thirdMap.setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
-        reSelectButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Map randomMap = Randomize();
-                AnimationSelectedMap(randomMap);
-                /*ChangeImage.schedule(new TimerTask() {
-                                         @Override
-                                         public void run() {
-
-
-
-                                             runOnUiThread(new Runnable() {
-                                                 @Override
-                                                 public void run() {
-                                                     for (int i = 0; i < 2; i++) {
-                                                         for (int j = 0; j < cupsToRandomize.size(); j++) {
-                                                             for (int k = 0; k < cupsToRandomize.get(j).getSize(); k++) {
-                                                                 ArrayList<Map> maps = new ArrayList<Map>();
-                                                                 maps.add(cupsToRandomize.get(j).getMap((k)%4));
-                                                                 maps.add(cupsToRandomize.get(j).getMap((k+1)%4));
-                                                                 maps.add(cupsToRandomize.get(j).getMap((k+2)%4));
-                                                                 ArrayList<String> nameMaps = new ArrayList<>();
-                                                                 for (int l = 0; l < maps.size(); l++) {
-                                                                     nameMaps.add(maps.get(l).getName());
-                                                                     nameMaps.set(l,nameMaps.get(l).toLowerCase(Locale.ROOT));
-                                                                     nameMaps.set(l,nameMaps.get(l).replace(" ", "_"));
-                                                                     nameMaps.set(l,nameMaps.get(l).replace("é", "e"));
-                                                                 }
-                                                                 int idFirstMap = context.getResources().getIdentifier(nameMaps.get(0), "drawable", context.getPackageName());
-                                                                 int idSecondMap = context.getResources().getIdentifier(nameMaps.get(1), "drawable", context.getPackageName());
-                                                                 int idThirdMap = context.getResources().getIdentifier(nameMaps.get(2), "drawable", context.getPackageName());
-                                                                 firstMap.setImageResource(idFirstMap);
-                                                                 secondMap.setImageResource(idSecondMap);
-                                                                 thirdMap.setImageResource(idThirdMap);
-
-                                                             }
-                                                         }
-                                                     }
-                                                 }
-                                             });
-                                         }
-                                     }
-                        , 0, 500);*/
-            }
-        });
-        Map randomMap = Randomize();
-        AnimationSelectedMap(randomMap);
+        initItems();
 
     }
     /**
@@ -118,7 +65,32 @@ public class RandomMaps extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
-    public Map Randomize() {
+    public void initItems(){
+        firstMap = findViewById(R.id.firstMap);
+        secondMap = findViewById(R.id.secondMap);
+        thirdMap = findViewById(R.id.thirdMap);
+        textMapName = findViewById(R.id.textCharacterName);
+        reSelectButton = findViewById(R.id.reSelectButton);
+        cupIcon = findViewById(R.id.cupIcon);
+        firstMap.setColorFilter(0x99999999,PorterDuff.Mode.MULTIPLY);
+        thirdMap.setColorFilter(0x99999999, PorterDuff.Mode.MULTIPLY);
+        reSelectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Randomize();
+            }
+        });
+        Randomize();
+        buttonHome = findViewById(R.id.homeButtonRM);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHome();
+            }
+        });
+    }
+
+    public void Randomize() {
 
         if(!isMultiSelect || numberOfCourses < cupsToRandomize.size()*4) {
             Random randomCup = new Random();
@@ -130,25 +102,26 @@ public class RandomMaps extends AppCompatActivity {
             if (isMultiSelect) {
                 if (cupsToRandomize.get(randomCupNumber).getMap(randomMapNumber).getAlreadySelected()) {
                     Randomize();
-                } else {
+                }
+                else {
                     selectedMap = selectedCup.getMap(randomMapNumber);
                     selectedMap.setAlreadySelected(true);
                     numberOfCourses++;
-                    return selectedMap;
+                    AnimationSelectedMap(selectedMap);
                 }
             }
             else {
                 selectedMap = selectedCup.getMap(randomMapNumber);
                 numberOfCourses++;
             }
-            return selectedMap;
+            AnimationSelectedMap(selectedMap);
 
         }
         else {
             AlertNoMoreMap();
-            return null;
         }
     }
+
     public void AlertNoMoreMap(){
         new AlertDialog.Builder(this)
                 .setTitle("Plus de courses!")
@@ -215,5 +188,10 @@ public class RandomMaps extends AppCompatActivity {
                 }
             }
         }
+    }
+    public void openHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }

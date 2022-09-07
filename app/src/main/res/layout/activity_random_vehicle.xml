@@ -6,6 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".RandomVehicle">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mapsButton2"
+
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/ic_bouton"
+        android:fontFamily="@font/mario_kart_f2"
+        android:shadowColor="#000000"
+        android:shadowRadius="20"
+        android:text="Courses"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backViewMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/backViewMain"
         android:layout_width="0dp"
@@ -21,9 +39,21 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:id="@+id/homeButtonRV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_home" />
+
+    <ImageView
         android:id="@+id/vehicleRandomizeFrame"
         android:layout_width="wrap_content"
         android:layout_height="314dp"
+        android:scaleX="1.05"
+        android:scaleY="1.05"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,6 +66,7 @@
         android:id="@+id/vehicleRandomizeButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/ic_bouton"
         android:fontFamily="@font/mario_kart_f2"
         android:shadowColor="#000000"
@@ -43,59 +74,58 @@
         android:text="Selectionner"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:textSize="14dp"
         android:textStyle="normal"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView29"
+        app:layout_constraintTop_toBottomOf="@+id/wheelRandomizeButton"
         tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/wingRandomizeButton"
-        android:layout_width="115dp"
-        android:layout_height="48dp"
-        android:background="@drawable/ic_bouton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/random_icon"
         android:fontFamily="@font/mario_kart_f2"
         android:shadowColor="#000000"
         android:shadowRadius="20"
-        android:text="Selectionner"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="7sp"
+        android:textSize="7dp"
         android:textStyle="normal"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/selectedWingImage"
         app:layout_constraintStart_toStartOf="@+id/selectedWingImage"
-        app:layout_constraintTop_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintTop_toTopOf="@+id/wheelRandomizeButton"
         tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/wheelRandomizeButton"
-        android:layout_width="113dp"
-        android:layout_height="48dp"
-        android:background="@drawable/ic_bouton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/random_icon"
         android:fontFamily="@font/mario_kart_f2"
         android:shadowColor="#000000"
         android:shadowRadius="20"
-        android:text="Selectionner"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textStyle="normal"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/selectedWheelImage"
-        app:layout_constraintTop_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgtoundText"
         tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bodyRandomizeButton"
-        android:layout_width="113dp"
-        android:layout_height="48dp"
-        android:background="@drawable/ic_bouton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/random_icon"
         android:fontFamily="@font/mario_kart_f2"
         android:shadowColor="#000000"
         android:shadowRadius="20"
-        android:text="Selectionner"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textStyle="normal"
@@ -103,18 +133,41 @@
         app:layout_constraintEnd_toEndOf="@+id/selectedBodyImage"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="@+id/selectedBodyImage"
-        app:layout_constraintTop_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintTop_toBottomOf="@+id/backgtoundText"
         tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/selectedBodyImage"
         android:layout_width="113dp"
         android:layout_height="92dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="15px"
         app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintEnd_toStartOf="@+id/firstWheelImage"
         app:layout_constraintStart_toStartOf="@+id/vehicleRandomizeFrame"
         app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
         app:layout_constraintVertical_bias="0.497"
+        app:srcCompat="@drawable/vehicle_body_kart_corps_kart_standard_8" />
+
+    <ImageView
+        android:id="@+id/firstBodyImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="15px"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/firstWheelImage"
+        app:layout_constraintStart_toStartOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
+        app:srcCompat="@drawable/vehicle_body_kart_corps_kart_standard_8" />
+
+    <ImageView
+        android:id="@+id/thirdBodyImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="15px"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintEnd_toStartOf="@+id/firstWheelImage"
+        app:layout_constraintStart_toStartOf="@+id/vehicleRandomizeFrame"
         app:srcCompat="@drawable/vehicle_body_kart_corps_kart_standard_8" />
 
     <ImageView
@@ -122,6 +175,26 @@
         android:layout_width="113dp"
         android:layout_height="92dp"
         app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
+        app:srcCompat="@drawable/vehicle_wheel_roue_standard_8" />
+
+    <ImageView
+        android:id="@+id/thirdWheelImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintEnd_toStartOf="@+id/selectedWingImage"
+        app:layout_constraintStart_toEndOf="@+id/selectedBodyImage"
+        app:srcCompat="@drawable/vehicle_wheel_roue_standard_8" />
+
+    <ImageView
+        android:id="@+id/firstWheelImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@+id/selectedWingImage"
         app:layout_constraintStart_toEndOf="@+id/selectedBodyImage"
         app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
@@ -131,55 +204,106 @@
         android:id="@+id/selectedWingImage"
         android:layout_width="113dp"
         android:layout_height="92dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
         app:layout_constraintEnd_toEndOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintStart_toEndOf="@+id/selectedWheelImage"
         app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
         app:layout_constraintVertical_bias="0.502"
         app:srcCompat="@drawable/vehicle_wingl_aile_standard_8" />
 
     <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="385dp"
+        android:id="@+id/thirdWingImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="10px"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintEnd_toEndOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintStart_toEndOf="@+id/thirdWheelImage"
+        app:srcCompat="@drawable/vehicle_wingl_aile_standard_8" />
+
+    <ImageView
+        android:id="@+id/firstWingImage"
+        android:layout_width="113dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10px"
+        app:layout_constraintEnd_toEndOf="@+id/vehicleRandomizeFrame"
+        app:layout_constraintStart_toEndOf="@+id/firstWheelImage"
+        app:layout_constraintTop_toTopOf="@+id/vehicleRandomizeFrame"
+        app:srcCompat="@drawable/vehicle_wingl_aile_standard_8" />
+
+    <ImageView
+        android:id="@+id/backgtoundText"
+        android:layout_width="wrap_content"
         android:layout_height="63dp"
-        app:layout_constraintEnd_toEndOf="@+id/backViewMain"
+        android:layout_marginTop="10dp"
+        android:scaleX="0.975"
+        android:scaleY="1.7"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/backViewMain"
-        app:layout_constraintTop_toBottomOf="@+id/wheelRandomizeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdWheelImage"
         app:srcCompat="@drawable/fond_texte_map" />
+
+    <ImageView
+        android:id="@+id/vehicleRandomizeStroke"
+        android:layout_width="wrap_content"
+        android:layout_height="314dp"
+        android:scaleX="1.05"
+        android:scaleY="1.05"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272"
+        app:srcCompat="@drawable/kart_stroke" />
 
     <TextView
         android:id="@+id/selectedBodyName"
-        android:layout_width="129dp"
-        android:layout_height="19dp"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/baijamjuree_regular"
         android:text="Standard"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgtoundText"
         app:layout_constraintEnd_toEndOf="@+id/selectedBodyImage"
         app:layout_constraintStart_toStartOf="@+id/selectedBodyImage"
-        app:layout_constraintTop_toTopOf="@+id/imageView29"
+        app:layout_constraintTop_toTopOf="@+id/backgtoundText"
         app:layout_constraintVertical_bias="0.48" />
 
     <TextView
         android:id="@+id/selectedWheelName"
-        android:layout_width="123dp"
-        android:layout_height="19dp"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/baijamjuree_regular"
         android:text="Standard"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgtoundText"
         app:layout_constraintEnd_toEndOf="@+id/selectedWheelImage"
         app:layout_constraintStart_toStartOf="@+id/selectedWheelImage"
-        app:layout_constraintTop_toTopOf="@+id/imageView29" />
+        app:layout_constraintTop_toTopOf="@+id/backgtoundText" />
 
     <TextView
         android:id="@+id/selectedWingName"
-        android:layout_width="127dp"
-        android:layout_height="20dp"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/baijamjuree_regular"
         android:text="Standard"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgtoundText"
         app:layout_constraintEnd_toEndOf="@+id/selectedWingImage"
         app:layout_constraintStart_toStartOf="@+id/selectedWingImage"
-        app:layout_constraintTop_toTopOf="@+id/imageView29" />
+        app:layout_constraintTop_toTopOf="@+id/backgtoundText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

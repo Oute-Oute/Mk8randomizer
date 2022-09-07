@@ -25,28 +25,31 @@ public class Parts implements Serializable {
         //BODY
         //KARTS
         //Create Karts
-        Part Kart1 = new Part("300 SL Roaster", "Kart");
-        Part Kart2 = new Part("Beat Bolide", "Kart");
-        Part Kart3 = new Part("Blue Falcon", "Kart");
-        Part Kart4 = new Part("Caraveloce", "Kart");
+        Part Kart1 = new Part("Kart Standard", "Kart");
+        Part Kart2 = new Part("Retro", "Kart");
+        Part Kart3 = new Part("Proto B", "Kart");
+        Part Kart4 = new Part("Nautomobile", "Kart");
         Part Kart5 = new Part("Chabriolet", "Kart");
-        Part Kart6 = new Part("Autorhino", "Kart");
-        Part Kart7 = new Part("Buggy Tanuki", "Kart");
-        Part Kart8 = new Part("Cavalkart", "Kart");
-        Part Kart9 = new Part("Intrepide", "Kart");
-        Part Kart10 = new Part("Magikart", "Kart");
-        Part Kart11 = new Part("Nautomobile", "Kart");
-        Part Kart12 = new Part("Or", "Kart");
+        Part Kart6 = new Part("Mach-celere", "Kart");
+        Part Kart7 = new Part("Tubul R3", "Kart");
+        Part Kart8 = new Part("Beat Bolide", "Kart");
+        Part Kart9 = new Part("Cavalkart", "Kart");
+        Part Kart10 = new Part("Paracoccinelly", "Kart");
+        Part Kart11 = new Part("Caraveloce", "Kart");
+        Part Kart12 = new Part("Sneakart", "Kart");
         Part Kart13 = new Part("Propulsar", "Kart");
-        Part Kart14 = new Part("Proto", "Kart");
-        Part Kart15 = new Part("Retro", "Kart");
-        Part Kart16 = new Part("Sneakart", "Kart");
-        Part Kart17 = new Part("Kart Standard", "Kart");
-        Part Kart18 = new Part("TubulR3", "Kart");
-        Part Kart19 = new Part("W25 Fleche DArgent", "Kart");
-        Part Kart20 = new Part("GLA", "Kart");
-        Part Kart21 = new Part("Mach-celere", "Kart");
-        Part Kart22 = new Part("Paracoccinelle", "Kart");
+        Part Kart14 = new Part("Or", "Kart");
+        Part Kart15 = new Part("GLA", "Kart");
+        Part Kart16 = new Part("W25 Fleche DArgent", "Kart");
+        Part Kart17 = new Part("300 SL Roaster", "Kart");
+        Part Kart18 = new Part("Blue Falcon", "Kart");
+        Part Kart19 = new Part("Buggy Tanuki", "Kart");
+        Part Kart20 = new Part("Intrepide", "Kart");
+        Part Kart21 = new Part("Autorhino", "Kart");
+        Part Kart22 = new Part("Magikart", "Kart");
+        Part Kart23= new Part("Koopa-mobile","Kart");
+
+
         //Add Karts to ArrayList
         Kart.add(Kart1);
         Kart.add(Kart2);
@@ -70,20 +73,23 @@ public class Parts implements Serializable {
         Kart.add(Kart20);
         Kart.add(Kart21);
         Kart.add(Kart22);
+        Kart.add(Kart23);
 
         //BIKES
         //Create Bikes
-        Part Bike1 = new Part("Cybertrombe", "Bike");
-        Part Bike2 = new Part("Destrier De Legende", "Bike");
-        Part Bike3 = new Part("Epervier", "Bike");
-        Part Bike4 = new Part("Flamboyante", "Bike");
-        Part Bike5 = new Part("Mecabecane", "Bike");
-        Part Bike6 = new Part("Meteore", "Bike");
-        Part Bike7 = new Part("Scooter", "Bike");
-        Part Bike8 = new Part("Scootinette", "Bike");
-        Part Bike9 = new Part("Sport GP", "Bike");
-        Part Bike10 = new Part("Yoshimoto", "Bike");
-        Part Bike11 = new Part("Moto Standard", "Bike");
+
+        Part Bike1 = new Part("Moto Standard", "Bike");
+        Part Bike2 = new Part("Meteore", "Bike");
+        Part Bike3 = new Part("Sport GP", "Bike");
+        Part Bike4 = new Part("Cybertrombe", "Bike");
+        Part Bike5 = new Part("Flamboyante", "Bike");
+        Part Bike6 = new Part("Mecabecane", "Bike");
+        Part Bike7 = new Part("Scootinette", "Bike");
+        Part Bike8 = new Part("Epervier", "Bike");
+        Part Bike9 = new Part("Yoshimoto", "Bike");
+        Part Bike10 = new Part("Destrier De Legende", "Bike");
+        Part Bike11 = new Part("Destrier De Legende 0.1", "Bike");
+        Part Bike12 = new Part("Scooter", "Bike");
         //Add Bikes to ArrayList
         Bike.add(Bike1);
         Bike.add(Bike2);
@@ -96,18 +102,23 @@ public class Parts implements Serializable {
         Bike.add(Bike9);
         Bike.add(Bike10);
         Bike.add(Bike11);
+        Bike.add(Bike12);
 
         //QUADS
         //Create Quads
-        Part Quad1 = new Part("Malecycle", "Quad");
-        Part Quad2 = new Part("Quad Nounours", "Quad");
-        Part Quad3 = new Part("Quad Wiggler", "Quad");
         Part Quad4 = new Part("Quad Standard", "Quad");
+        Part Quad3 = new Part("Quad Wiggler", "Quad");
+        Part Quad2 = new Part("Quad Nounours", "Quad");
+        Part Quad1 = new Part("Malecycle", "Quad");
+        Part Quad5 = new Part("Kartoon", "Quad");
+        Part Quad6 = new Part("Missile Tornade", "Quad");
         //Add Quads to ArrayList
         Quad.add(Quad1);
         Quad.add(Quad2);
         Quad.add(Quad3);
         Quad.add(Quad4);
+        Quad.add(Quad5);
+        Quad.add(Quad6);
 
         //add all parts to ArrayList
         Body.addAll(Kart);
@@ -116,27 +127,28 @@ public class Parts implements Serializable {
 
         //WHEELS
         //Create Wheels
-        Part Wheel1 = new Part("Roue bois", "Wheel");
-        Part Wheel2 = new Part("Roue Bouton", "Wheel");
-        Part Wheel3 = new Part("Roue Classique", "Wheel");
-        Part Wheel4 = new Part("Roue Classique Rouge", "Wheel");
-        Part Wheel5 = new Part("Roue Coussin", "Wheel");
-        Part Wheel6 = new Part("Roue Cyber Lisse", "Wheel");
-        Part Wheel7 = new Part("Roue Eponge", "Wheel");
-        Part Wheel8 = new Part("Roue Feuille", "Wheel");
-        Part Wheel9 = new Part("Roue Gla", "Wheel");
-        Part Wheel10 = new Part("Roue Hors-Piste", "Wheel");
-        Part Wheel11 = new Part("Roue Hors-Piste Retro", "Wheel");
-        Part Wheel12 = new Part("Roue Lisse", "Wheel");
-        Part Wheel13 = new Part("Roue Mastodonte", "Wheel");
-        Part Wheel14 = new Part("Roue Masto-Flamme", "Wheel");
-        Part Wheel15 = new Part("Roue Metal", "Wheel");
-        Part Wheel16 = new Part("Roue Or", "Wheel");
-        Part Wheel17 = new Part("Roue Roller", "Wheel");
-        Part Wheel18 = new Part("Roue Roller Azur", "Wheel");
-        Part Wheel19 = new Part("Roue Standard", "Wheel");
-        Part Wheel20 = new Part("Roue Standard Bleu", "Wheel");
-        Part Wheel21 = new Part("Roue Triforce", "Wheel");
+        Part Wheel1 = new Part("Roue Standard", "Wheel");
+        Part Wheel2 = new Part("Roue Mastodonte", "Wheel");
+        Part Wheel3 = new Part("Roue Roller", "Wheel");
+        Part Wheel4 = new Part("Roue Classique", "Wheel");
+        Part Wheel5 = new Part("Roue Lisse", "Wheel");
+        Part Wheel6 = new Part("Roue Metal", "Wheel");
+        Part Wheel7 = new Part("Roue Bouton", "Wheel");
+        Part Wheel8 = new Part("Roue Hors-Piste", "Wheel");
+        Part Wheel9 = new Part("Roue Eponge", "Wheel");
+        Part Wheel10 = new Part("Roue bois", "Wheel");
+        Part Wheel11 = new Part("Roue Coussin", "Wheel");
+        Part Wheel12 = new Part("Roue Standard Bleu", "Wheel");
+        Part Wheel13 = new Part("Roue Masto-Flamme", "Wheel");
+        Part Wheel14 = new Part("Roue Roller Azur", "Wheel");
+        Part Wheel15 = new Part("Roue Classique Rouge", "Wheel");
+        Part Wheel16 = new Part("Roue Cyber Lisse", "Wheel");
+        Part Wheel17 = new Part("Roue Hors-Piste Retro", "Wheel");
+        Part Wheel18 = new Part("Roue Or", "Wheel");
+        Part Wheel19 = new Part("Roue Gla", "Wheel");
+        Part Wheel20 = new Part("Roue Triforce", "Wheel");
+        Part Wheel21 = new Part("Roue Archeonique", "Wheel");
+        Part Wheel22 = new Part("Roue Feuille", "Wheel");
 
         //Add Wheels to ArrayList
         Wheel.add(Wheel1);
@@ -160,23 +172,25 @@ public class Parts implements Serializable {
         Wheel.add(Wheel19);
         Wheel.add(Wheel20);
         Wheel.add(Wheel21);
+        Wheel.add(Wheel22);
 
         //WINGS
         //Create Wings
-        Part Wing1 = new Part("Aile Bowser Volant", "Wing");
-        Part Wing2 = new Part("Aile Dendinaile", "Wing");
-        Part Wing3 = new Part("Aile En Papier", "Wing");
-        Part Wing4 = new Part("Aile Fleurie", "Wing");
-        Part Wing5 = new Part("Aile Hylienne", "Wing");
-        Part Wing6 = new Part("Aile Nuages", "Wing");
-        Part Wing7 = new Part("Aile Or", "Wing");
-        Part Wing8 = new Part("Aile Parachute", "Wing");
-        Part Wing9 = new Part("Aile Parapente", "Wing");
-        Part Wing10 = new Part("Aile Parapente MKTV", "Wing");
-        Part Wing11 = new Part("Aile Planeur", "Wing");
-        Part Wing12 = new Part("Aile Standard", "Wing");
-        Part Wing13 = new Part("Aile Wario", "Wing");
-        Part Wing14 = new Part("Ombrelle Peach", "Wing");
+        Part Wing1 = new Part("Aile Standard", "Wing");
+        Part Wing2 = new Part("Aile Nuages", "Wing");
+        Part Wing3 = new Part("Aile Wario", "Wing");
+        Part Wing4 = new Part("Aile Dendinaile", "Wing");
+        Part Wing5 = new Part("Ombrelle Peach", "Wing");
+        Part Wing6 = new Part("Aile Parachute", "Wing");
+        Part Wing7 = new Part("Aile Parapente", "Wing");
+        Part Wing8 = new Part("Aile Fleurie", "Wing");
+        Part Wing9 = new Part("Aile Bowser Volant", "Wing");
+        Part Wing10 = new Part("Aile Planeur", "Wing");
+        Part Wing11 = new Part("Aile Parapente MKTV", "Wing");
+        Part Wing12 = new Part("Aile Or", "Wing");
+        Part Wing13 = new Part("Aile Hylienne", "Wing");
+        Part Wing14 = new Part("Paravoile", "Wing");
+        Part Wing15 = new Part("Aile En Papier", "Wing");
 
         //Add Wings to ArrayList
         Wing.add(Wing1);
@@ -193,6 +207,7 @@ public class Parts implements Serializable {
         Wing.add(Wing12);
         Wing.add(Wing13);
         Wing.add(Wing14);
+        Wing.add(Wing15);
     }
 
     public void setSelectedBike(boolean b) {

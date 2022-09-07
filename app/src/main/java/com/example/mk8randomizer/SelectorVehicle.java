@@ -18,7 +18,7 @@ import java.io.Serializable;
 
 public class SelectorVehicle extends AppCompatActivity {
 
-    private ImageView imageKart, imageBike, imageQuad;
+    private ImageView imageKart, imageBike, imageQuad, buttonHome;
     private Button buttonVehicleNext;
     private Parts parts = new Parts();
 
@@ -78,6 +78,13 @@ public class SelectorVehicle extends AppCompatActivity {
         imageBike = findViewById(R.id.moto_Standard_Mario_8);
         imageQuad = findViewById(R.id.quad_Standard_Mario);
         buttonVehicleNext = findViewById(R.id.buttonVehiclesNext);
+        buttonHome = findViewById(R.id.homeButtonSV);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHome();
+            }
+        });
     }
 
     public void BodyClick(View v){
@@ -109,5 +116,10 @@ public class SelectorVehicle extends AppCompatActivity {
                     imageQuad.setColorFilter(0xFFFFFFFF, PorterDuff.Mode.MULTIPLY);}
                 break;
         }
+    }
+    public void openHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }

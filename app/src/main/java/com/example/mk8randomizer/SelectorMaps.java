@@ -23,7 +23,7 @@ public class SelectorMaps extends AppCompatActivity {
 
     private Cups cups = new Cups();
     private final HashMap<Integer, ImageView> imageViewHashMap = new HashMap<>();
-    private ImageView imageView1, imageView2, imageView3, imageView4, imageView5, imageView6, imageView7, imageView8, imageView9, imageView10, imageView11, imageView12, imageView13, imageView14, imageView15, imageView16, imageView17, imageView18, imageView19, imageView20, imageView21, imageView22, imageView23, imageView24;
+    private ImageView imageView1, imageView2, imageView3, imageView4, imageView5, imageView6, imageView7, imageView8, imageView9, imageView10, imageView11, imageView12, imageView13, imageView14, imageView15, imageView16, imageView17, imageView18, imageView19, imageView20, imageView21, imageView22, imageView23, imageView24, buttonHome;
     private Switch switchMultiSelect, switchClassic, switchRetros, switchDLC, switchPass;
     private Button buttonNext;
 
@@ -186,6 +186,13 @@ public class SelectorMaps extends AppCompatActivity {
         switchPass = findViewById(R.id.switchPass);
         switchMultiSelect = findViewById(R.id.switchMultiSelect);
         buttonNext = findViewById(R.id.buttonNext);
+        buttonHome = findViewById(R.id.homeButtonMS);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHome();
+            }
+        });
     }
 
     public void MapsClick(int type, int finalI) {
@@ -306,5 +313,10 @@ public class SelectorMaps extends AppCompatActivity {
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
         }
+    }
+    public void openHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }

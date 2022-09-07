@@ -7,10 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    private Animation animation;
+    private ImageView backViewMain;
     private Button mapsButton, vehiclesButton, characterButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        backViewMain= findViewById(R.id.backViewMain);
+
+
 
         vehiclesButton = findViewById(R.id.vehiclesButton);
         //si appuie sur le bouton "Vehicles", on ouvre l'activité VehiclesSelector
