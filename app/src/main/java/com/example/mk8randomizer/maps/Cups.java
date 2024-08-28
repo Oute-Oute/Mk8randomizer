@@ -104,45 +104,45 @@ public class Cups implements Serializable{
         Map map63 = new Map("Gorge champignon", "WII", false);
         Map map64 = new Map("Cite sorbet", "Switch", false);
         //PIERRE
-        Map map65 = new Map("NC", "NC", false);
-        Map map66 = new Map("NC", "NC", false);
-        Map map67 = new Map("NC", "NC", false);
-        Map map68 = new Map("NC", "NC", false);
+        Map map65 = new Map("Détour à Londres", "TOUR", false);
+        Map map66 = new Map("Lac Boo", "GBA", false);
+        Map map67 = new Map("Mont Éboulis", "3DS", false);
+        Map map68 = new Map("Bois Vermeil", "WII", false);
         //LUNE
-        Map map69 = new Map("NC", "NC", false);
-        Map map70 = new Map("NC", "NC", false);
-        Map map71 = new Map("NC", "NC", false);
-        Map map72 = new Map("NC", "NC", false);
+        Map map69 = new Map("Balade Berlinoise", "TOUR", false);
+        Map map70 = new Map("Jardin Peach", "DS", false);
+        Map map71 = new Map("Mont Festif", "TOUR", false);
+        Map map72 = new Map("Route Arc-en-ciel", "3DS", false);
         //FRUIT
-        Map map73 = new Map("NC", "NC", false);
-        Map map74 = new Map("NC", "NC", false);
-        Map map75 = new Map("NC", "NC", false);
-        Map map76 = new Map("NC", "NC", false);
+        Map map73 = new Map("Virée à Amsterdam", "TOUR", false);
+        Map map74 = new Map("Riverside Parc", "GBA", false);
+        Map map75 = new Map("Pic DK", "WII", false);
+        Map map76 = new Map("Île de Yoshi", "Switch", false);
         //BOOMERANG
-        Map map77 = new Map("NC", "NC", false);
-        Map map78 = new Map("NC", "NC", false);
-        Map map79 = new Map("NC", "NC", false);
-        Map map80 = new Map("NC", "NC", false);
+        Map map77 = new Map("Bousculade à Bangkok", "TOUR", false);
+        Map map78 = new Map("Circuit Mario", "DS", false);
+        Map map79 = new Map("Stade Waluigi", "N64", false);
+        Map map80 = new Map("Poursuite à Singapour", "TOUR", false);
         //PLUME
-        Map map81 = new Map("NC", "NC", false);
-        Map map82 = new Map("NC", "NC", false);
-        Map map83 = new Map("NC", "NC", false);
-        Map map84 = new Map("NC", "NC", false);
+        Map map81 = new Map("Athènes antique", "TOUR", false);
+        Map map82 = new Map("Paquebot Daisy", "N64", false);
+        Map map83 = new Map("Route Clair de Lune", "WII", false);
+        Map map84 = new Map("Course à la propreté", "Switch", false);
         //CERISES
-        Map map85 = new Map("NC", "NC", false);
-        Map map86 = new Map("NC", "NC", false);
-        Map map87 = new Map("NC", "NC", false);
-        Map map88 = new Map("NC", "NC", false);
+        Map map85 = new Map("Road-Trip à Los Angeles", "TOUR", false);
+        Map map86 = new Map("Pays Crépuscule", "GBA", false);
+        Map map87 = new Map("Cap Koopa", "WII", false);
+        Map map88 = new Map("Virages à Vancouver", "TOUR", false);
         //GLAND
-        Map map89 = new Map("NC", "NC", false);
-        Map map90 = new Map("NC", "NC", false);
-        Map map91 = new Map("NC", "NC", false);
-        Map map92 = new Map("NC", "NC", false);
+        Map map89 = new Map("Rome romantique", "TOUR", false);
+        Map map90 = new Map("Montagne DK", "N64", false);
+        Map map91 = new Map("Circuit Daisy", "WII", false);
+        Map map92 = new Map("Ruines Plante Piranha", "TOUR", false);
         //EPINES
-        Map map93 = new Map("NC", "NC", false);
-        Map map94 = new Map("NC", "NC", false);
-        Map map95 = new Map("NC", "NC", false);
-        Map map96 = new Map("NC", "NC", false);
+        Map map93 = new Map("Méandres Madrilènes", "TOUR", false);
+        Map map94 = new Map("Monde glacé d'Harmonie", "3DS", false);
+        Map map95 = new Map("Château de Bowser 3", "SNES", false);
+        Map map96 = new Map("Route Arc-en-ciel", "WII", false);
         //FIN CREATION MAPS
 
         //CREATION CUPS
@@ -162,14 +162,14 @@ public class Cups implements Serializable{
         Cup cup14 = new Cup("Coupe Maneki-Neko", map53, map54, map55, map56, "Pass Additionnel", true);
         Cup cup15 = new Cup("Coupe Navet", map57, map58, map59, map60, "Pass Additionnel", true);
         Cup cup16 = new Cup("Coupe Hélico", map61, map62, map63, map64, "Pass Additionnel", true);
-        Cup cup17 = new Cup("Coupe Pierre", map65, map66, map67, map68, "Pass Additionnel", false);
-        Cup cup18 = new Cup("Coupe Lune", map69, map70, map71, map72, "Pass Additionnel", false);
-        Cup cup19 = new Cup("Coupe Fruit", map73, map74, map75, map76, "Pass Additionnel", false);
-        Cup cup20 = new Cup("Coupe Boomerang", map77, map78, map79, map80, "Pass Additionnel", false);
-        Cup cup21 = new Cup("Coupe Plume", map81, map82, map83, map84, "Pass Additionnel", false);
-        Cup cup22 = new Cup("Coupe Cerises", map85, map86, map87, map88, "Pass Additionnel", false);
-        Cup cup23 = new Cup("Coupe Gland", map89, map90, map91, map92, "Pass Additionnel", false);
-        Cup cup24 = new Cup("Coupe à épines", map93, map94, map95, map96, "Pass Additionnel", false);
+        Cup cup17 = new Cup("Coupe Pierre", map65, map66, map67, map68, "Pass Additionnel", true);
+        Cup cup18 = new Cup("Coupe Lune", map69, map70, map71, map72, "Pass Additionnel", true);
+        Cup cup19 = new Cup("Coupe Fruit", map73, map74, map75, map76, "Pass Additionnel", true);
+        Cup cup20 = new Cup("Coupe Boomerang", map77, map78, map79, map80, "Pass Additionnel", true);
+        Cup cup21 = new Cup("Coupe Plume", map81, map82, map83, map84, "Pass Additionnel", true);
+        Cup cup22 = new Cup("Coupe Cerises", map85, map86, map87, map88, "Pass Additionnel", true);
+        Cup cup23 = new Cup("Coupe Gland", map89, map90, map91, map92, "Pass Additionnel", true);
+        Cup cup24 = new Cup("Coupe à épines", map93, map94, map95, map96, "Pass Additionnel", true);
         //FIN CREATION CUPS
 
         //CREATION CUPS TYPE

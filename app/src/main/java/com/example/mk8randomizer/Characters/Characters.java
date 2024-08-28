@@ -67,6 +67,19 @@ public class Characters implements Serializable {
         Character heavy11 = new Character("Mario de Metal");
         Character heavy12 = new Character("Peach d'Or Rose");
 
+        //DLC characters
+        Character DLC1 = new Character("Diddy Kong");
+        Character DLC2 = new Character("Funky Kong");
+        Character DLC3 = new Character("Pauline");
+        Character DLC4 = new Character("Birdo");
+        Character DLC5 = new Character("Plante Piranha");
+        Character DLC6 = new Character("Wiggler");
+        Character DLC7 = new Character("Kamek");
+        Character DLC8 = new Character("Peachette");
+
+
+
+
         //Add Characters to ArrayList
         //Light Characters
         lightCharacters.add(light1);
@@ -85,6 +98,7 @@ public class Characters implements Serializable {
         lightCharacters.add(light14);
         lightCharacters.add(light15);
         lightCharacters.add(light16);
+        lightCharacters.add(DLC7);
         //Medium Characters
         mediumCharacters.add(medium1);
         mediumCharacters.add(medium2);
@@ -99,6 +113,10 @@ public class Characters implements Serializable {
         mediumCharacters.add(medium11);
         mediumCharacters.add(medium12);
         mediumCharacters.add(medium13);
+        mediumCharacters.add(DLC1);
+        mediumCharacters.add(DLC4);
+        mediumCharacters.add(DLC6);
+        mediumCharacters.add(DLC8);
         //Heavy Characters
         heavyCharacters.add(heavy1);
         heavyCharacters.add(heavy2);
@@ -112,6 +130,10 @@ public class Characters implements Serializable {
         heavyCharacters.add(heavy10);
         heavyCharacters.add(heavy11);
         heavyCharacters.add(heavy12);
+        heavyCharacters.add(DLC2);
+        heavyCharacters.add(DLC3);
+        heavyCharacters.add(DLC5);
+
 
 
     }

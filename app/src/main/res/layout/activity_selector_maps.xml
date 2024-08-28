@@ -414,7 +414,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_coup_pierre_icon" />
+                        android:src="@drawable/cup_coupe_pierre_icon" />
 
                     <ImageView
                         android:id="@+id/imageView18"
@@ -438,7 +438,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cup_coup_fruit_icon" />
+                        android:src="@drawable/cup_coupe_fruit_icon" />
 
                     <ImageView
                         android:id="@+id/imageView20"
